@@ -1,0 +1,1886 @@
+{
+  "kegiatan": [
+    {
+      "ID_Kegiatan": "KGT001",
+      "Nama_Kegiatan": "Data Bridge",
+      "Tanggal": null,
+      "Jenis_Kegiatan": "Agenda",
+      "Penyelenggara": "HIMA BISDIG FEB UNM",
+      "Lokasi": null,
+      "Jumlah_Pelaksanaan": 2,
+      "Target_Peserta": "Mahasiswa Bisnis Digital",
+      "Status": "belum selesai"
+    },
+    {
+      "ID_Kegiatan": "KGT002",
+      "Nama_Kegiatan": "Finance Talk x Pintu",
+      "Tanggal": null,
+      "Jenis_Kegiatan": "Agenda",
+      "Penyelenggara": "HIMA BISDIG FEB UNM",
+      "Lokasi": null,
+      "Jumlah_Pelaksanaan": 3,
+      "Target_Peserta": "Umum",
+      "Status": "belum selesai"
+    },
+    {
+      "ID_Kegiatan": "KGT003",
+      "Nama_Kegiatan": "Training Of Trainer",
+      "Tanggal": null,
+      "Jenis_Kegiatan": "Proker",
+      "Penyelenggara": "HIMA BISDIG FEB UNM",
+      "Lokasi": null,
+      "Jumlah_Pelaksanaan": 1,
+      "Target_Peserta": "Mahasiswa Bisnis Digital",
+      "Status": "Selesai"
+    },
+    {
+      "ID_Kegiatan": "KGT004",
+      "Nama_Kegiatan": "Creative Support Class",
+      "Tanggal": null,
+      "Jenis_Kegiatan": "Agenda",
+      "Penyelenggara": "HIMA BISDIG FEB UNM",
+      "Lokasi": null,
+      "Jumlah_Pelaksanaan": 1,
+      "Target_Peserta": "Mahasiswa Bisnis Digital",
+      "Status": "Selesai"
+    },
+    {
+      "ID_Kegiatan": "KGT005",
+      "Nama_Kegiatan": "Digicamp",
+      "Tanggal": null,
+      "Jenis_Kegiatan": "Proker",
+      "Penyelenggara": "HIMA BISDIG FEB UNM",
+      "Lokasi": null,
+      "Jumlah_Pelaksanaan": 1,
+      "Target_Peserta": "Seluruh elemen Bisnis Digital",
+      "Status": "Selesai"
+    }
+  ],
+  "peserta": [
+    {
+      "ID_Peserta": "PDB001",
+      "ID_Kegiatan": "KGT001",
+      "Nama": "Nur Syafira",
+      "Divisi_atau_Status": "Peserta",
+      "Program_Studi": "Bisnis Digital",
+      "Universitas": "UNM"
+    },
+    {
+      "ID_Peserta": "PDB002",
+      "ID_Kegiatan": "KGT001",
+      "Nama": "Nur Aenah",
+      "Divisi_atau_Status": "Peserta",
+      "Program_Studi": "Bisnis Digital",
+      "Universitas": "UNM"
+    },
+    {
+      "ID_Peserta": "PDB003",
+      "ID_Kegiatan": "KGT001",
+      "Nama": "JUWITA",
+      "Divisi_atau_Status": "Peserta",
+      "Program_Studi": "Bisnis Digital",
+      "Universitas": "UNM"
+    },
+    {
+      "ID_Peserta": "PDB004",
+      "ID_Kegiatan": "KGT001",
+      "Nama": "Indah Fauziah",
+      "Divisi_atau_Status": "Peserta",
+      "Program_Studi": "Bisnis Digital",
+      "Universitas": "UNM"
+    },
+    {
+      "ID_Peserta": "PDB005",
+      "ID_Kegiatan": "KGT001",
+      "Nama": "Andi Nilza Humaira",
+      "Divisi_atau_Status": "Peserta",
+      "Program_Studi": "Bisnis Digital",
+      "Universitas": "UNM"
+    },
+    {
+      "ID_Peserta": "PDB006",
+      "ID_Kegiatan": "KGT001",
+      "Nama": "Fatimah Az Zahra",
+      "Divisi_atau_Status": "Peserta",
+      "Program_Studi": "Bisnis Digital",
+      "Universitas": "UNM"
+    },
+    {
+      "ID_Peserta": "PDB007",
+      "ID_Kegiatan": "KGT001",
+      "Nama": "Muh.Hilal Rusydin Hidayat",
+      "Divisi_atau_Status": "Peserta",
+      "Program_Studi": "Bisnis Digital",
+      "Universitas": "UNM"
+    },
+    {
+      "ID_Peserta": "PDB008",
+      "ID_Kegiatan": "KGT001",
+      "Nama": "Ratna wulandari",
+      "Divisi_atau_Status": "Peserta",
+      "Program_Studi": "Bisnis Digital",
+      "Universitas": "UNM"
+    },
+    {
+      "ID_Peserta": "PDB009",
+      "ID_Kegiatan": "KGT001",
+      "Nama": "Agus Pratama",
+      "Divisi_atau_Status": "Peserta",
+      "Program_Studi": "Bisnis Digital",
+      "Universitas": "UNM"
+    },
+    {
+      "ID_Peserta": "PDB010",
+      "ID_Kegiatan": "KGT001",
+      "Nama": "Nur hanisa aprilia",
+      "Divisi_atau_Status": "Peserta",
+      "Program_Studi": "Bisnis Digital",
+      "Universitas": "UNM"
+    },
+    {
+      "ID_Peserta": "PDB011",
+      "ID_Kegiatan": "KGT001",
+      "Nama": "Jumra",
+      "Divisi_atau_Status": "Peserta",
+      "Program_Studi": "Bisnis Digital",
+      "Universitas": "UNM"
+    },
+    {
+      "ID_Peserta": "PDB012",
+      "ID_Kegiatan": "KGT001",
+      "Nama": "Zaskia putri",
+      "Divisi_atau_Status": "Peserta",
+      "Program_Studi": "Bisnis Digital",
+      "Universitas": "UNM"
+    },
+    {
+      "ID_Peserta": "PDB013",
+      "ID_Kegiatan": "KGT001",
+      "Nama": "Fridolin Joice Padandi",
+      "Divisi_atau_Status": "Peserta",
+      "Program_Studi": "Bisnis Digital",
+      "Universitas": "UNM"
+    },
+    {
+      "ID_Peserta": "PDB014",
+      "ID_Kegiatan": "KGT001",
+      "Nama": "Salfa Rifdatul Afiyah",
+      "Divisi_atau_Status": "Peserta",
+      "Program_Studi": "Bisnis Digital",
+      "Universitas": "UNM"
+    },
+    {
+      "ID_Peserta": "PDB015",
+      "ID_Kegiatan": "KGT001",
+      "Nama": "Musdalifa",
+      "Divisi_atau_Status": "Peserta",
+      "Program_Studi": "Bisnis Digital",
+      "Universitas": "UNM"
+    },
+    {
+      "ID_Peserta": "PDB016",
+      "ID_Kegiatan": "KGT001",
+      "Nama": "Putri Sekar Wangi",
+      "Divisi_atau_Status": "Peserta",
+      "Program_Studi": "Bisnis Digital",
+      "Universitas": "UNM"
+    },
+    {
+      "ID_Peserta": "PDB017",
+      "ID_Kegiatan": "KGT001",
+      "Nama": "Deswitasari",
+      "Divisi_atau_Status": "Peserta",
+      "Program_Studi": "Bisnis Digital",
+      "Universitas": "UNM"
+    },
+    {
+      "ID_Peserta": "PDB018",
+      "ID_Kegiatan": "KGT001",
+      "Nama": "Muh. Faqih Alfaiz Lingga Saputra",
+      "Divisi_atau_Status": "Peserta",
+      "Program_Studi": "Bisnis Digital",
+      "Universitas": "UNM"
+    },
+    {
+      "ID_Peserta": "PDB019",
+      "ID_Kegiatan": "KGT001",
+      "Nama": "Syamsul Alam Hamsa",
+      "Divisi_atau_Status": "Peserta",
+      "Program_Studi": "Bisnis Digital",
+      "Universitas": "UNM"
+    },
+    {
+      "ID_Peserta": "PDB020",
+      "ID_Kegiatan": "KGT001",
+      "Nama": "Muhammad Syauqi Mubarak Hasim",
+      "Divisi_atau_Status": "Peserta",
+      "Program_Studi": "Bisnis Digital",
+      "Universitas": "UNM"
+    },
+    {
+      "ID_Peserta": "PDB021",
+      "ID_Kegiatan": "KGT001",
+      "Nama": "Makkawaru Ahmad Imanuddin",
+      "Divisi_atau_Status": "Peserta",
+      "Program_Studi": "Bisnis Digital",
+      "Universitas": "UNM"
+    },
+    {
+      "ID_Peserta": "PDB022",
+      "ID_Kegiatan": "KGT001",
+      "Nama": "Viona Julie Kalangie",
+      "Divisi_atau_Status": "Peserta",
+      "Program_Studi": "Bisnis Digital",
+      "Universitas": "UNM"
+    },
+    {
+      "ID_Peserta": "PDB023",
+      "ID_Kegiatan": "KGT001",
+      "Nama": "St. Noer Anindya",
+      "Divisi_atau_Status": "Peserta",
+      "Program_Studi": "Bisnis Digital",
+      "Universitas": "UNM"
+    },
+    {
+      "ID_Peserta": "PDB024",
+      "ID_Kegiatan": "KGT001",
+      "Nama": "Ahmad Fikrulkhair",
+      "Divisi_atau_Status": "Peserta",
+      "Program_Studi": "Bisnis Digital",
+      "Universitas": "UNM"
+    },
+    {
+      "ID_Peserta": "PDB025",
+      "ID_Kegiatan": "KGT001",
+      "Nama": "Salsabilah",
+      "Divisi_atau_Status": "Peserta",
+      "Program_Studi": "Bisnis Digital",
+      "Universitas": "UNM"
+    },
+    {
+      "ID_Peserta": "PDB026",
+      "ID_Kegiatan": "KGT001",
+      "Nama": "Fitri Aulia",
+      "Divisi_atau_Status": "Peserta",
+      "Program_Studi": "Bisnis Digital",
+      "Universitas": "UNM"
+    },
+    {
+      "ID_Peserta": "PDB027",
+      "ID_Kegiatan": "KGT001",
+      "Nama": "Reskiqha Nurfatiha Sari",
+      "Divisi_atau_Status": "Peserta",
+      "Program_Studi": "Bisnis Digital",
+      "Universitas": "UNM"
+    },
+    {
+      "ID_Peserta": "PDB028",
+      "ID_Kegiatan": "KGT001",
+      "Nama": "Ihsan Hidayat",
+      "Divisi_atau_Status": "Peserta",
+      "Program_Studi": "Bisnis Digital",
+      "Universitas": "UNM"
+    },
+    {
+      "ID_Peserta": "PDB029",
+      "ID_Kegiatan": "KGT001",
+      "Nama": "St Farischa",
+      "Divisi_atau_Status": "Peserta",
+      "Program_Studi": "Bisnis Digital",
+      "Universitas": "UNM"
+    },
+    {
+      "ID_Peserta": "PDB030",
+      "ID_Kegiatan": "KGT001",
+      "Nama": "Andi Nurul Dwi Alifa",
+      "Divisi_atau_Status": "Peserta",
+      "Program_Studi": "Bisnis Digital",
+      "Universitas": "UNM"
+    },
+    {
+      "ID_Peserta": "PBB001",
+      "ID_Kegiatan": "KGT001",
+      "Nama": "Anononim 01",
+      "Divisi_atau_Status": "Panitia/Pengurus",
+      "Program_Studi": "Bisnis Digital",
+      "Universitas": "UNM"
+    },
+    {
+      "ID_Peserta": "PBB002",
+      "ID_Kegiatan": "KGT001",
+      "Nama": "Mohalfinoor Wirabuana",
+      "Divisi_atau_Status": "Panitia/Pengurus",
+      "Program_Studi": "Bisnis Digital",
+      "Universitas": "UNM"
+    },
+    {
+      "ID_Peserta": "PBB003",
+      "ID_Kegiatan": "KGT001",
+      "Nama": "Kirana",
+      "Divisi_atau_Status": "Panitia/Pengurus",
+      "Program_Studi": "Bisnis Digital",
+      "Universitas": "UNM"
+    },
+    {
+      "ID_Peserta": "PBB004",
+      "ID_Kegiatan": "KGT001",
+      "Nama": "R",
+      "Divisi_atau_Status": "Panitia/Pengurus",
+      "Program_Studi": "Bisnis Digital",
+      "Universitas": "UNM"
+    },
+    {
+      "ID_Peserta": "PBB005",
+      "ID_Kegiatan": "KGT001",
+      "Nama": "Akram",
+      "Divisi_atau_Status": "Tamu/Undangan",
+      "Program_Studi": "Bisnis Digital",
+      "Universitas": "UNM"
+    },
+    {
+      "ID_Peserta": "PBB006",
+      "ID_Kegiatan": "KGT001",
+      "Nama": "imut",
+      "Divisi_atau_Status": "Panitia/Pengurus",
+      "Program_Studi": "Bisnis Digital",
+      "Universitas": "UNM"
+    },
+    {
+      "ID_Peserta": "PBB007",
+      "ID_Kegiatan": "KGT001",
+      "Nama": "Anononim 02",
+      "Divisi_atau_Status": "Peserta",
+      "Program_Studi": "Bisnis Digital",
+      "Universitas": "UNM"
+    },
+    {
+      "ID_Peserta": "PBB008",
+      "ID_Kegiatan": "KGT001",
+      "Nama": "Anononim 03",
+      "Divisi_atau_Status": "Panitia/Pengurus",
+      "Program_Studi": "Bisnis Digital",
+      "Universitas": "UNM"
+    },
+    {
+      "ID_Peserta": "PBB009",
+      "ID_Kegiatan": "KGT001",
+      "Nama": "Andi Nilza Humaira",
+      "Divisi_atau_Status": "Panitia/Pengurus",
+      "Program_Studi": "Bisnis Digital",
+      "Universitas": "UNM"
+    },
+    {
+      "ID_Peserta": "PBB010",
+      "ID_Kegiatan": "KGT001",
+      "Nama": "Anononim 04",
+      "Divisi_atau_Status": "Panitia/Pengurus",
+      "Program_Studi": "Bisnis Digital",
+      "Universitas": "UNM"
+    },
+    {
+      "ID_Peserta": "PBB011",
+      "ID_Kegiatan": "KGT001",
+      "Nama": "Anononim 05",
+      "Divisi_atau_Status": "Panitia/Pengurus",
+      "Program_Studi": "Bisnis Digital",
+      "Universitas": "UNM"
+    },
+    {
+      "ID_Peserta": "PBB012",
+      "ID_Kegiatan": "KGT001",
+      "Nama": "Anononim 06",
+      "Divisi_atau_Status": "Panitia/Pengurus",
+      "Program_Studi": "Bisnis Digital",
+      "Universitas": "UNM"
+    },
+    {
+      "ID_Peserta": "PBB013",
+      "ID_Kegiatan": "KGT001",
+      "Nama": "Aril ekos 6",
+      "Divisi_atau_Status": "Panitia/Pengurus",
+      "Program_Studi": "Bisnis Digital",
+      "Universitas": "UNM"
+    },
+    {
+      "ID_Peserta": "PBB014",
+      "ID_Kegiatan": "KGT001",
+      "Nama": "Juwita",
+      "Divisi_atau_Status": "Panitia/Pengurus",
+      "Program_Studi": "Bisnis Digital",
+      "Universitas": "UNM"
+    },
+    {
+      "ID_Peserta": "PBB015",
+      "ID_Kegiatan": "KGT001",
+      "Nama": "Miskatul Jannah",
+      "Divisi_atau_Status": "Panitia/Pengurus",
+      "Program_Studi": "Bisnis Digital",
+      "Universitas": "UNM"
+    },
+    {
+      "ID_Peserta": "PBB016",
+      "ID_Kegiatan": "KGT001",
+      "Nama": "bullung",
+      "Divisi_atau_Status": "Panitia/Pengurus",
+      "Program_Studi": "Bisnis Digital",
+      "Universitas": "UNM"
+    },
+    {
+      "ID_Peserta": "PBB017",
+      "ID_Kegiatan": "KGT001",
+      "Nama": "no name",
+      "Divisi_atau_Status": "Panitia/Pengurus",
+      "Program_Studi": "Bisnis Digital",
+      "Universitas": "UNM"
+    },
+    {
+      "ID_Peserta": "PBB018",
+      "ID_Kegiatan": "KGT001",
+      "Nama": "Fadil",
+      "Divisi_atau_Status": "Panitia/Pengurus",
+      "Program_Studi": "Bisnis Digital",
+      "Universitas": "UNM"
+    },
+    {
+      "ID_Peserta": "PBB019",
+      "ID_Kegiatan": "KGT001",
+      "Nama": "Opsinal",
+      "Divisi_atau_Status": "Panitia/Pengurus",
+      "Program_Studi": "Bisnis Digital",
+      "Universitas": "UNM"
+    },
+    {
+      "ID_Peserta": "PBB020",
+      "ID_Kegiatan": "KGT001",
+      "Nama": "Faqih Faisal",
+      "Divisi_atau_Status": "Panitia/Pengurus",
+      "Program_Studi": "Bisnis Digital",
+      "Universitas": "UNM"
+    },
+    {
+      "ID_Peserta": "PBB021",
+      "ID_Kegiatan": "KGT001",
+      "Nama": "Ihsan Hidayat",
+      "Divisi_atau_Status": "Panitia/Pengurus",
+      "Program_Studi": "Bisnis Digital",
+      "Universitas": "UNM"
+    },
+    {
+      "ID_Peserta": "PBB022",
+      "ID_Kegiatan": "KGT001",
+      "Nama": "sasaa",
+      "Divisi_atau_Status": "Panitia/Pengurus",
+      "Program_Studi": "Bisnis Digital",
+      "Universitas": "UNM"
+    },
+    {
+      "ID_Peserta": "PBB023",
+      "ID_Kegiatan": "KGT001",
+      "Nama": "n",
+      "Divisi_atau_Status": "Panitia/Pengurus",
+      "Program_Studi": "Bisnis Digital",
+      "Universitas": "UNM"
+    },
+    {
+      "ID_Peserta": "PBB024",
+      "ID_Kegiatan": "KGT001",
+      "Nama": "Azzika",
+      "Divisi_atau_Status": "Panitia/Pengurus",
+      "Program_Studi": "Bisnis Digital",
+      "Universitas": "UNM"
+    },
+    {
+      "ID_Peserta": "PBB025",
+      "ID_Kegiatan": "KGT001",
+      "Nama": "Anononim 07",
+      "Divisi_atau_Status": "Panitia/Pengurus",
+      "Program_Studi": "Bisnis Digital",
+      "Universitas": "UNM"
+    },
+    {
+      "ID_Peserta": "PBB026",
+      "ID_Kegiatan": "KGT001",
+      "Nama": "Rinjani",
+      "Divisi_atau_Status": "Panitia/Pengurus",
+      "Program_Studi": "Bisnis Digital",
+      "Universitas": "UNM"
+    },
+    {
+      "ID_Peserta": "PBB027",
+      "ID_Kegiatan": "KGT001",
+      "Nama": "MaKkAwArU AhMaD ImAnUdDiN",
+      "Divisi_atau_Status": "Panitia/Pengurus",
+      "Program_Studi": "Bisnis Digital",
+      "Universitas": "UNM"
+    },
+    {
+      "ID_Peserta": "PFT001",
+      "ID_Kegiatan": "KGT002",
+      "Nama": "Thiara Ramadhani",
+      "Divisi_atau_Status": "Peserta",
+      "Program_Studi": null,
+      "Universitas": null
+    },
+    {
+      "ID_Peserta": "PFT002",
+      "ID_Kegiatan": "KGT002",
+      "Nama": "Ahmad Fikrulkahir",
+      "Divisi_atau_Status": "Peserta",
+      "Program_Studi": null,
+      "Universitas": null
+    },
+    {
+      "ID_Peserta": "PFT003",
+      "ID_Kegiatan": "KGT002",
+      "Nama": "Deswitasari",
+      "Divisi_atau_Status": "Panitia/Pengurus",
+      "Program_Studi": null,
+      "Universitas": null
+    },
+    {
+      "ID_Peserta": "PFT004",
+      "ID_Kegiatan": "KGT002",
+      "Nama": "Zaskia Puspita Sari",
+      "Divisi_atau_Status": "Panitia/Pengurus",
+      "Program_Studi": null,
+      "Universitas": null
+    },
+    {
+      "ID_Peserta": "PFT005",
+      "ID_Kegiatan": "KGT002",
+      "Nama": "Muh.Hilal Rusydin Hidayat",
+      "Divisi_atau_Status": "Peserta",
+      "Program_Studi": null,
+      "Universitas": null
+    },
+    {
+      "ID_Peserta": "PFT006",
+      "ID_Kegiatan": "KGT002",
+      "Nama": "Fauziaazzahra",
+      "Divisi_atau_Status": "Peserta",
+      "Program_Studi": null,
+      "Universitas": null
+    },
+    {
+      "ID_Peserta": "PFT007",
+      "ID_Kegiatan": "KGT002",
+      "Nama": "putri amelia",
+      "Divisi_atau_Status": "Panitia/Pengurus",
+      "Program_Studi": null,
+      "Universitas": null
+    },
+    {
+      "ID_Peserta": "PFT008",
+      "ID_Kegiatan": "KGT002",
+      "Nama": "M.Al Ghifari Rinawan S",
+      "Divisi_atau_Status": "Peserta",
+      "Program_Studi": null,
+      "Universitas": null
+    },
+    {
+      "ID_Peserta": "PFT009",
+      "ID_Kegiatan": "KGT002",
+      "Nama": "Putri Sekar Wangi",
+      "Divisi_atau_Status": "Peserta",
+      "Program_Studi": null,
+      "Universitas": null
+    },
+    {
+      "ID_Peserta": "PFT010",
+      "ID_Kegiatan": "KGT002",
+      "Nama": "Selvi Tri Jayanti ",
+      "Divisi_atau_Status": "Peserta",
+      "Program_Studi": null,
+      "Universitas": null
+    },
+    {
+      "ID_Peserta": "PFT011",
+      "ID_Kegiatan": "KGT002",
+      "Nama": "Agus Pratama",
+      "Divisi_atau_Status": "Peserta",
+      "Program_Studi": null,
+      "Universitas": null
+    },
+    {
+      "ID_Peserta": "PFT012",
+      "ID_Kegiatan": "KGT002",
+      "Nama": "Dea Ananda",
+      "Divisi_atau_Status": "Peserta",
+      "Program_Studi": null,
+      "Universitas": null
+    },
+    {
+      "ID_Peserta": "PFT013",
+      "ID_Kegiatan": "KGT002",
+      "Nama": "Husnul Nadya. F",
+      "Divisi_atau_Status": "Peserta",
+      "Program_Studi": null,
+      "Universitas": null
+    },
+    {
+      "ID_Peserta": "PFT014",
+      "ID_Kegiatan": "KGT002",
+      "Nama": "Nur ulfiah Triputri Iskandar",
+      "Divisi_atau_Status": "Peserta",
+      "Program_Studi": null,
+      "Universitas": null
+    },
+    {
+      "ID_Peserta": "PFT015",
+      "ID_Kegiatan": "KGT002",
+      "Nama": "Iqbal",
+      "Divisi_atau_Status": "Peserta",
+      "Program_Studi": null,
+      "Universitas": null
+    },
+    {
+      "ID_Peserta": "PFT016",
+      "ID_Kegiatan": "KGT002",
+      "Nama": "Muh.Haikal Tuanany",
+      "Divisi_atau_Status": "Peserta",
+      "Program_Studi": null,
+      "Universitas": null
+    },
+    {
+      "ID_Peserta": "PFT017",
+      "ID_Kegiatan": "KGT002",
+      "Nama": "Indah Nurul Rezky",
+      "Divisi_atau_Status": "Peserta",
+      "Program_Studi": null,
+      "Universitas": null
+    },
+    {
+      "ID_Peserta": "PFT018",
+      "ID_Kegiatan": "KGT002",
+      "Nama": "Putri Sekar Wangi",
+      "Divisi_atau_Status": "Peserta",
+      "Program_Studi": null,
+      "Universitas": null
+    },
+    {
+      "ID_Peserta": "PFT019",
+      "ID_Kegiatan": "KGT002",
+      "Nama": "Mutiara Azzahra",
+      "Divisi_atau_Status": "Peserta",
+      "Program_Studi": null,
+      "Universitas": null
+    },
+    {
+      "ID_Peserta": "PFT020",
+      "ID_Kegiatan": "KGT002",
+      "Nama": "Arutia",
+      "Divisi_atau_Status": "Panitia/Pengurus",
+      "Program_Studi": null,
+      "Universitas": null
+    },
+    {
+      "ID_Peserta": "PFT021",
+      "ID_Kegiatan": "KGT002",
+      "Nama": "Egi Arfandi",
+      "Divisi_atau_Status": "Peserta",
+      "Program_Studi": null,
+      "Universitas": null
+    },
+    {
+      "ID_Peserta": "PFT022",
+      "ID_Kegiatan": "KGT002",
+      "Nama": "Dea Ananda",
+      "Divisi_atau_Status": "Peserta",
+      "Program_Studi": null,
+      "Universitas": null
+    },
+    {
+      "ID_Peserta": "PFT023",
+      "ID_Kegiatan": "KGT002",
+      "Nama": "Putri Amelia",
+      "Divisi_atau_Status": "Peserta",
+      "Program_Studi": null,
+      "Universitas": null
+    },
+    {
+      "ID_Peserta": "PFT024",
+      "ID_Kegiatan": "KGT002",
+      "Nama": "Firman",
+      "Divisi_atau_Status": "Peserta",
+      "Program_Studi": null,
+      "Universitas": null
+    },
+    {
+      "ID_Peserta": "PFT025",
+      "ID_Kegiatan": "KGT002",
+      "Nama": "Reskiqha Nurfatiha Sari",
+      "Divisi_atau_Status": "Peserta",
+      "Program_Studi": null,
+      "Universitas": null
+    },
+    {
+      "ID_Peserta": "PFT026",
+      "ID_Kegiatan": "KGT002",
+      "Nama": "Muhammad Fauzan Alifatah",
+      "Divisi_atau_Status": "Peserta",
+      "Program_Studi": null,
+      "Universitas": null
+    },
+    {
+      "ID_Peserta": "PFT027",
+      "ID_Kegiatan": "KGT002",
+      "Nama": "Rey Richard B.",
+      "Divisi_atau_Status": "Peserta",
+      "Program_Studi": null,
+      "Universitas": null
+    },
+    {
+      "ID_Peserta": "PFT028",
+      "ID_Kegiatan": "KGT002",
+      "Nama": "Nurul Syafiqah Andari",
+      "Divisi_atau_Status": "Peserta",
+      "Program_Studi": null,
+      "Universitas": null
+    },
+    {
+      "ID_Peserta": "PFT029",
+      "ID_Kegiatan": "KGT002",
+      "Nama": "Muhammad Yusuf",
+      "Divisi_atau_Status": "Peserta",
+      "Program_Studi": null,
+      "Universitas": null
+    },
+    {
+      "ID_Peserta": "PFT030",
+      "ID_Kegiatan": "KGT002",
+      "Nama": "Fitri Aulia",
+      "Divisi_atau_Status": "Panitia/Pengurus",
+      "Program_Studi": null,
+      "Universitas": null
+    },
+    {
+      "ID_Peserta": "PFT031",
+      "ID_Kegiatan": "KGT002",
+      "Nama": "Muhammad Farel Pratama ",
+      "Divisi_atau_Status": "Peserta",
+      "Program_Studi": null,
+      "Universitas": null
+    },
+    {
+      "ID_Peserta": "PFT032",
+      "ID_Kegiatan": "KGT002",
+      "Nama": "Agus Pratama ",
+      "Divisi_atau_Status": "Peserta",
+      "Program_Studi": null,
+      "Universitas": null
+    },
+    {
+      "ID_Peserta": "PFT033",
+      "ID_Kegiatan": "KGT002",
+      "Nama": "Achmad Catur  Pakrsadewa",
+      "Divisi_atau_Status": "Peserta",
+      "Program_Studi": null,
+      "Universitas": null
+    },
+    {
+      "ID_Peserta": "PFT034",
+      "ID_Kegiatan": "KGT002",
+      "Nama": "Siti Aisy",
+      "Divisi_atau_Status": "Peserta",
+      "Program_Studi": null,
+      "Universitas": null
+    },
+    {
+      "ID_Peserta": "PFT035",
+      "ID_Kegiatan": "KGT002",
+      "Nama": "Siti Nurfadillah Rahmah Tasdir",
+      "Divisi_atau_Status": "Peserta",
+      "Program_Studi": null,
+      "Universitas": null
+    },
+    {
+      "ID_Peserta": "PFT036",
+      "ID_Kegiatan": "KGT002",
+      "Nama": "PRAYOGA ARYANTO NUGRAHA",
+      "Divisi_atau_Status": "Peserta",
+      "Program_Studi": null,
+      "Universitas": null
+    },
+    {
+      "ID_Peserta": "PFT037",
+      "ID_Kegiatan": "KGT002",
+      "Nama": "Asper",
+      "Divisi_atau_Status": "Peserta",
+      "Program_Studi": null,
+      "Universitas": null
+    },
+    {
+      "ID_Peserta": "PFT038",
+      "ID_Kegiatan": "KGT002",
+      "Nama": "Firman syah",
+      "Divisi_atau_Status": "Peserta",
+      "Program_Studi": null,
+      "Universitas": null
+    },
+    {
+      "ID_Peserta": "PFT039",
+      "ID_Kegiatan": "KGT002",
+      "Nama": "Yanti",
+      "Divisi_atau_Status": "Peserta",
+      "Program_Studi": null,
+      "Universitas": null
+    },
+    {
+      "ID_Peserta": "PFT040",
+      "ID_Kegiatan": "KGT002",
+      "Nama": "Muh Gavin Al Giffari",
+      "Divisi_atau_Status": "Peserta",
+      "Program_Studi": null,
+      "Universitas": null
+    },
+    {
+      "ID_Peserta": "PFT041",
+      "ID_Kegiatan": "KGT002",
+      "Nama": "Natasya",
+      "Divisi_atau_Status": "Peserta",
+      "Program_Studi": null,
+      "Universitas": null
+    },
+    {
+      "ID_Peserta": "PFT042",
+      "ID_Kegiatan": "KGT002",
+      "Nama": "Muhammad Nur Syamsi Hidayah",
+      "Divisi_atau_Status": "Peserta",
+      "Program_Studi": null,
+      "Universitas": null
+    },
+    {
+      "ID_Peserta": "PFT043",
+      "ID_Kegiatan": "KGT002",
+      "Nama": "Nurhanisa Aprilia",
+      "Divisi_atau_Status": "Peserta",
+      "Program_Studi": null,
+      "Universitas": null
+    },
+    {
+      "ID_Peserta": "PFT044",
+      "ID_Kegiatan": "KGT002",
+      "Nama": "Ahmad Maulana",
+      "Divisi_atau_Status": "Peserta",
+      "Program_Studi": null,
+      "Universitas": null
+    },
+    {
+      "ID_Peserta": "PFT045",
+      "ID_Kegiatan": "KGT002",
+      "Nama": "A. Sifa Ramadani",
+      "Divisi_atau_Status": "Panitia/Pengurus",
+      "Program_Studi": null,
+      "Universitas": null
+    },
+    {
+      "ID_Peserta": "PFT046",
+      "ID_Kegiatan": "KGT002",
+      "Nama": "Thiara Ramadhani",
+      "Divisi_atau_Status": "Peserta",
+      "Program_Studi": null,
+      "Universitas": null
+    },
+    {
+      "ID_Peserta": "PFT047",
+      "ID_Kegiatan": "KGT002",
+      "Nama": "A. Sifa Ramadani",
+      "Divisi_atau_Status": "Panitia/Pengurus",
+      "Program_Studi": null,
+      "Universitas": null
+    },
+    {
+      "ID_Peserta": "PFT048",
+      "ID_Kegiatan": "KGT002",
+      "Nama": "Arutia",
+      "Divisi_atau_Status": "Panitia/Pengurus",
+      "Program_Studi": null,
+      "Universitas": null
+    },
+    {
+      "ID_Peserta": "PFT049",
+      "ID_Kegiatan": "KGT002",
+      "Nama": "ABDUL RAJAB",
+      "Divisi_atau_Status": "Peserta",
+      "Program_Studi": null,
+      "Universitas": null
+    },
+    {
+      "ID_Peserta": "PFT050",
+      "ID_Kegiatan": "KGT002",
+      "Nama": "Kauzaki",
+      "Divisi_atau_Status": "Peserta",
+      "Program_Studi": null,
+      "Universitas": null
+    },
+    {
+      "ID_Peserta": "PFT051",
+      "ID_Kegiatan": "KGT002",
+      "Nama": "Muammar",
+      "Divisi_atau_Status": "Peserta",
+      "Program_Studi": null,
+      "Universitas": null
+    },
+    {
+      "ID_Peserta": "PFT052",
+      "ID_Kegiatan": "KGT002",
+      "Nama": "Ahmad Filzah Tsaqib Azhar",
+      "Divisi_atau_Status": "Peserta",
+      "Program_Studi": null,
+      "Universitas": null
+    },
+    {
+      "ID_Peserta": "PFT053",
+      "ID_Kegiatan": "KGT002",
+      "Nama": "Nadien",
+      "Divisi_atau_Status": "Panitia/Pengurus",
+      "Program_Studi": null,
+      "Universitas": null
+    }
+  ],
+  "prepost": [
+    {
+      "ID_Peserta": "PDB001",
+      "ID_Kegiatan": "KGT001",
+      "Nilai_PreTest": 50.0,
+      "Nilai_PostTest": 80.0,
+      "Persentase_Peningkatan": 60.0
+    },
+    {
+      "ID_Peserta": "PDB002",
+      "ID_Kegiatan": "KGT001",
+      "Nilai_PreTest": 60.0,
+      "Nilai_PostTest": 100.0,
+      "Persentase_Peningkatan": 66.67
+    },
+    {
+      "ID_Peserta": "PDB003",
+      "ID_Kegiatan": "KGT001",
+      "Nilai_PreTest": 60.0,
+      "Nilai_PostTest": 90.0,
+      "Persentase_Peningkatan": 50.0
+    },
+    {
+      "ID_Peserta": "PDB004",
+      "ID_Kegiatan": "KGT001",
+      "Nilai_PreTest": 30.0,
+      "Nilai_PostTest": 90.0,
+      "Persentase_Peningkatan": 200.0
+    },
+    {
+      "ID_Peserta": "PDB005",
+      "ID_Kegiatan": "KGT001",
+      "Nilai_PreTest": 60.0,
+      "Nilai_PostTest": 80.0,
+      "Persentase_Peningkatan": 33.33
+    },
+    {
+      "ID_Peserta": "PDB006",
+      "ID_Kegiatan": "KGT001",
+      "Nilai_PreTest": 60.0,
+      "Nilai_PostTest": 80.0,
+      "Persentase_Peningkatan": 33.33
+    },
+    {
+      "ID_Peserta": "PDB007",
+      "ID_Kegiatan": "KGT001",
+      "Nilai_PreTest": 50.0,
+      "Nilai_PostTest": 90.0,
+      "Persentase_Peningkatan": 80.0
+    },
+    {
+      "ID_Peserta": "PDB008",
+      "ID_Kegiatan": "KGT001",
+      "Nilai_PreTest": 50.0,
+      "Nilai_PostTest": 90.0,
+      "Persentase_Peningkatan": 80.0
+    },
+    {
+      "ID_Peserta": "PDB009",
+      "ID_Kegiatan": "KGT001",
+      "Nilai_PreTest": 60.0,
+      "Nilai_PostTest": 90.0,
+      "Persentase_Peningkatan": 50.0
+    },
+    {
+      "ID_Peserta": "PDB010",
+      "ID_Kegiatan": "KGT001",
+      "Nilai_PreTest": 50.0,
+      "Nilai_PostTest": 90.0,
+      "Persentase_Peningkatan": 80.0
+    },
+    {
+      "ID_Peserta": "PDB011",
+      "ID_Kegiatan": "KGT001",
+      "Nilai_PreTest": 60.0,
+      "Nilai_PostTest": 90.0,
+      "Persentase_Peningkatan": 50.0
+    },
+    {
+      "ID_Peserta": "PDB012",
+      "ID_Kegiatan": "KGT001",
+      "Nilai_PreTest": 60.0,
+      "Nilai_PostTest": 90.0,
+      "Persentase_Peningkatan": 50.0
+    },
+    {
+      "ID_Peserta": "PDB013",
+      "ID_Kegiatan": "KGT001",
+      "Nilai_PreTest": 40.0,
+      "Nilai_PostTest": 90.0,
+      "Persentase_Peningkatan": 125.0
+    },
+    {
+      "ID_Peserta": "PDB014",
+      "ID_Kegiatan": "KGT001",
+      "Nilai_PreTest": 60.0,
+      "Nilai_PostTest": 100.0,
+      "Persentase_Peningkatan": 66.67
+    },
+    {
+      "ID_Peserta": "PDB015",
+      "ID_Kegiatan": "KGT001",
+      "Nilai_PreTest": 60.0,
+      "Nilai_PostTest": 90.0,
+      "Persentase_Peningkatan": 50.0
+    },
+    {
+      "ID_Peserta": "PDB016",
+      "ID_Kegiatan": "KGT001",
+      "Nilai_PreTest": 60.0,
+      "Nilai_PostTest": 80.0,
+      "Persentase_Peningkatan": 33.33
+    },
+    {
+      "ID_Peserta": "PDB017",
+      "ID_Kegiatan": "KGT001",
+      "Nilai_PreTest": 60.0,
+      "Nilai_PostTest": 90.0,
+      "Persentase_Peningkatan": 50.0
+    },
+    {
+      "ID_Peserta": "PDB018",
+      "ID_Kegiatan": "KGT001",
+      "Nilai_PreTest": 50.0,
+      "Nilai_PostTest": 90.0,
+      "Persentase_Peningkatan": 80.0
+    },
+    {
+      "ID_Peserta": "PDB019",
+      "ID_Kegiatan": "KGT001",
+      "Nilai_PreTest": 10.0,
+      "Nilai_PostTest": 80.0,
+      "Persentase_Peningkatan": 700.0
+    },
+    {
+      "ID_Peserta": "PDB020",
+      "ID_Kegiatan": "KGT001",
+      "Nilai_PreTest": 50.0,
+      "Nilai_PostTest": 90.0,
+      "Persentase_Peningkatan": 80.0
+    },
+    {
+      "ID_Peserta": "PDB021",
+      "ID_Kegiatan": "KGT001",
+      "Nilai_PreTest": 60.0,
+      "Nilai_PostTest": 90.0,
+      "Persentase_Peningkatan": 50.0
+    },
+    {
+      "ID_Peserta": "PDB022",
+      "ID_Kegiatan": "KGT001",
+      "Nilai_PreTest": 50.0,
+      "Nilai_PostTest": 80.0,
+      "Persentase_Peningkatan": 60.0
+    },
+    {
+      "ID_Peserta": "PDB023",
+      "ID_Kegiatan": "KGT001",
+      "Nilai_PreTest": 60.0,
+      "Nilai_PostTest": 90.0,
+      "Persentase_Peningkatan": 50.0
+    },
+    {
+      "ID_Peserta": "PDB024",
+      "ID_Kegiatan": "KGT001",
+      "Nilai_PreTest": 60.0,
+      "Nilai_PostTest": 100.0,
+      "Persentase_Peningkatan": 66.67
+    },
+    {
+      "ID_Peserta": "PDB025",
+      "ID_Kegiatan": "KGT001",
+      "Nilai_PreTest": 30.0,
+      "Nilai_PostTest": 90.0,
+      "Persentase_Peningkatan": 200.0
+    },
+    {
+      "ID_Peserta": "PDB026",
+      "ID_Kegiatan": "KGT001",
+      "Nilai_PreTest": 60.0,
+      "Nilai_PostTest": 90.0,
+      "Persentase_Peningkatan": 50.0
+    },
+    {
+      "ID_Peserta": "PDB027",
+      "ID_Kegiatan": "KGT001",
+      "Nilai_PreTest": 50.0,
+      "Nilai_PostTest": 80.0,
+      "Persentase_Peningkatan": 60.0
+    },
+    {
+      "ID_Peserta": "PDB028",
+      "ID_Kegiatan": "KGT001",
+      "Nilai_PreTest": 30.0,
+      "Nilai_PostTest": 90.0,
+      "Persentase_Peningkatan": 200.0
+    },
+    {
+      "ID_Peserta": "PDB029",
+      "ID_Kegiatan": "KGT001",
+      "Nilai_PreTest": 60.0,
+      "Nilai_PostTest": 90.0,
+      "Persentase_Peningkatan": 50.0
+    },
+    {
+      "ID_Peserta": "PDB030",
+      "ID_Kegiatan": "KGT001",
+      "Nilai_PreTest": 50.0,
+      "Nilai_PostTest": 90.0,
+      "Persentase_Peningkatan": 80.0
+    },
+    {
+      "ID_Peserta": "PFT001",
+      "ID_Kegiatan": "KGT002",
+      "Nilai_PreTest": 0.0,
+      "Nilai_PostTest": 40.0,
+      "Persentase_Peningkatan": 100.0
+    },
+    {
+      "ID_Peserta": "PFT002",
+      "ID_Kegiatan": "KGT002",
+      "Nilai_PreTest": 10.0,
+      "Nilai_PostTest": 30.0,
+      "Persentase_Peningkatan": 200.0
+    },
+    {
+      "ID_Peserta": "PFT003",
+      "ID_Kegiatan": "KGT002",
+      "Nilai_PreTest": 10.0,
+      "Nilai_PostTest": 100.0,
+      "Persentase_Peningkatan": 900.0
+    },
+    {
+      "ID_Peserta": "PFT004",
+      "ID_Kegiatan": "KGT002",
+      "Nilai_PreTest": 10.0,
+      "Nilai_PostTest": 50.0,
+      "Persentase_Peningkatan": 400.0
+    },
+    {
+      "ID_Peserta": "PFT005",
+      "ID_Kegiatan": "KGT002",
+      "Nilai_PreTest": 10.0,
+      "Nilai_PostTest": null,
+      "Persentase_Peningkatan": null
+    },
+    {
+      "ID_Peserta": "PFT006",
+      "ID_Kegiatan": "KGT002",
+      "Nilai_PreTest": 10.0,
+      "Nilai_PostTest": 100.0,
+      "Persentase_Peningkatan": 900.0
+    },
+    {
+      "ID_Peserta": "PFT007",
+      "ID_Kegiatan": "KGT002",
+      "Nilai_PreTest": 10.0,
+      "Nilai_PostTest": 60.0,
+      "Persentase_Peningkatan": 500.0
+    },
+    {
+      "ID_Peserta": "PFT008",
+      "ID_Kegiatan": "KGT002",
+      "Nilai_PreTest": 20.0,
+      "Nilai_PostTest": 90.0,
+      "Persentase_Peningkatan": 350.0
+    },
+    {
+      "ID_Peserta": "PFT009",
+      "ID_Kegiatan": "KGT002",
+      "Nilai_PreTest": 20.0,
+      "Nilai_PostTest": 100.0,
+      "Persentase_Peningkatan": 400.0
+    },
+    {
+      "ID_Peserta": "PFT010",
+      "ID_Kegiatan": "KGT002",
+      "Nilai_PreTest": 20.0,
+      "Nilai_PostTest": 100.0,
+      "Persentase_Peningkatan": 400.0
+    },
+    {
+      "ID_Peserta": "PFT011",
+      "ID_Kegiatan": "KGT002",
+      "Nilai_PreTest": 20.0,
+      "Nilai_PostTest": 100.0,
+      "Persentase_Peningkatan": 400.0
+    },
+    {
+      "ID_Peserta": "PFT012",
+      "ID_Kegiatan": "KGT002",
+      "Nilai_PreTest": 20.0,
+      "Nilai_PostTest": 100.0,
+      "Persentase_Peningkatan": 400.0
+    },
+    {
+      "ID_Peserta": "PFT013",
+      "ID_Kegiatan": "KGT002",
+      "Nilai_PreTest": 30.0,
+      "Nilai_PostTest": 100.0,
+      "Persentase_Peningkatan": 233.33
+    },
+    {
+      "ID_Peserta": "PFT014",
+      "ID_Kegiatan": "KGT002",
+      "Nilai_PreTest": 30.0,
+      "Nilai_PostTest": 100.0,
+      "Persentase_Peningkatan": 233.33
+    },
+    {
+      "ID_Peserta": "PFT015",
+      "ID_Kegiatan": "KGT002",
+      "Nilai_PreTest": 30.0,
+      "Nilai_PostTest": 100.0,
+      "Persentase_Peningkatan": 233.33
+    },
+    {
+      "ID_Peserta": "PFT016",
+      "ID_Kegiatan": "KGT002",
+      "Nilai_PreTest": 30.0,
+      "Nilai_PostTest": 90.0,
+      "Persentase_Peningkatan": 200.0
+    },
+    {
+      "ID_Peserta": "PFT017",
+      "ID_Kegiatan": "KGT002",
+      "Nilai_PreTest": 30.0,
+      "Nilai_PostTest": 100.0,
+      "Persentase_Peningkatan": 233.33
+    },
+    {
+      "ID_Peserta": "PFT018",
+      "ID_Kegiatan": "KGT002",
+      "Nilai_PreTest": 30.0,
+      "Nilai_PostTest": 100.0,
+      "Persentase_Peningkatan": 233.33
+    },
+    {
+      "ID_Peserta": "PFT019",
+      "ID_Kegiatan": "KGT002",
+      "Nilai_PreTest": 30.0,
+      "Nilai_PostTest": 100.0,
+      "Persentase_Peningkatan": 233.33
+    },
+    {
+      "ID_Peserta": "PFT020",
+      "ID_Kegiatan": "KGT002",
+      "Nilai_PreTest": 30.0,
+      "Nilai_PostTest": 100.0,
+      "Persentase_Peningkatan": 233.33
+    },
+    {
+      "ID_Peserta": "PFT021",
+      "ID_Kegiatan": "KGT002",
+      "Nilai_PreTest": 30.0,
+      "Nilai_PostTest": 70.0,
+      "Persentase_Peningkatan": 133.33
+    },
+    {
+      "ID_Peserta": "PFT022",
+      "ID_Kegiatan": "KGT002",
+      "Nilai_PreTest": 30.0,
+      "Nilai_PostTest": 100.0,
+      "Persentase_Peningkatan": 233.33
+    },
+    {
+      "ID_Peserta": "PFT023",
+      "ID_Kegiatan": "KGT002",
+      "Nilai_PreTest": 40.0,
+      "Nilai_PostTest": 60.0,
+      "Persentase_Peningkatan": 50.0
+    },
+    {
+      "ID_Peserta": "PFT024",
+      "ID_Kegiatan": "KGT002",
+      "Nilai_PreTest": 40.0,
+      "Nilai_PostTest": 90.0,
+      "Persentase_Peningkatan": 125.0
+    },
+    {
+      "ID_Peserta": "PFT025",
+      "ID_Kegiatan": "KGT002",
+      "Nilai_PreTest": 40.0,
+      "Nilai_PostTest": 80.0,
+      "Persentase_Peningkatan": 100.0
+    },
+    {
+      "ID_Peserta": "PFT026",
+      "ID_Kegiatan": "KGT002",
+      "Nilai_PreTest": 40.0,
+      "Nilai_PostTest": 100.0,
+      "Persentase_Peningkatan": 150.0
+    },
+    {
+      "ID_Peserta": "PFT027",
+      "ID_Kegiatan": "KGT002",
+      "Nilai_PreTest": 40.0,
+      "Nilai_PostTest": 90.0,
+      "Persentase_Peningkatan": 125.0
+    },
+    {
+      "ID_Peserta": "PFT028",
+      "ID_Kegiatan": "KGT002",
+      "Nilai_PreTest": 40.0,
+      "Nilai_PostTest": 100.0,
+      "Persentase_Peningkatan": 150.0
+    },
+    {
+      "ID_Peserta": "PFT029",
+      "ID_Kegiatan": "KGT002",
+      "Nilai_PreTest": 40.0,
+      "Nilai_PostTest": 100.0,
+      "Persentase_Peningkatan": 150.0
+    },
+    {
+      "ID_Peserta": "PFT030",
+      "ID_Kegiatan": "KGT002",
+      "Nilai_PreTest": 40.0,
+      "Nilai_PostTest": 100.0,
+      "Persentase_Peningkatan": 150.0
+    },
+    {
+      "ID_Peserta": "PFT031",
+      "ID_Kegiatan": "KGT002",
+      "Nilai_PreTest": 40.0,
+      "Nilai_PostTest": 10.0,
+      "Persentase_Peningkatan": -75.0
+    },
+    {
+      "ID_Peserta": "PFT032",
+      "ID_Kegiatan": "KGT002",
+      "Nilai_PreTest": 40.0,
+      "Nilai_PostTest": 100.0,
+      "Persentase_Peningkatan": 150.0
+    },
+    {
+      "ID_Peserta": "PFT033",
+      "ID_Kegiatan": "KGT002",
+      "Nilai_PreTest": 50.0,
+      "Nilai_PostTest": 80.0,
+      "Persentase_Peningkatan": 60.0
+    },
+    {
+      "ID_Peserta": "PFT034",
+      "ID_Kegiatan": "KGT002",
+      "Nilai_PreTest": 50.0,
+      "Nilai_PostTest": 80.0,
+      "Persentase_Peningkatan": 60.0
+    },
+    {
+      "ID_Peserta": "PFT035",
+      "ID_Kegiatan": "KGT002",
+      "Nilai_PreTest": 50.0,
+      "Nilai_PostTest": 90.0,
+      "Persentase_Peningkatan": 80.0
+    },
+    {
+      "ID_Peserta": "PFT036",
+      "ID_Kegiatan": "KGT002",
+      "Nilai_PreTest": 50.0,
+      "Nilai_PostTest": 80.0,
+      "Persentase_Peningkatan": 60.0
+    },
+    {
+      "ID_Peserta": "PFT037",
+      "ID_Kegiatan": "KGT002",
+      "Nilai_PreTest": 50.0,
+      "Nilai_PostTest": 90.0,
+      "Persentase_Peningkatan": 80.0
+    },
+    {
+      "ID_Peserta": "PFT038",
+      "ID_Kegiatan": "KGT002",
+      "Nilai_PreTest": 50.0,
+      "Nilai_PostTest": 90.0,
+      "Persentase_Peningkatan": 80.0
+    },
+    {
+      "ID_Peserta": "PFT039",
+      "ID_Kegiatan": "KGT002",
+      "Nilai_PreTest": 50.0,
+      "Nilai_PostTest": 40.0,
+      "Persentase_Peningkatan": -20.0
+    },
+    {
+      "ID_Peserta": "PFT040",
+      "ID_Kegiatan": "KGT002",
+      "Nilai_PreTest": 50.0,
+      "Nilai_PostTest": 80.0,
+      "Persentase_Peningkatan": 60.0
+    },
+    {
+      "ID_Peserta": "PFT041",
+      "ID_Kegiatan": "KGT002",
+      "Nilai_PreTest": 50.0,
+      "Nilai_PostTest": 10.0,
+      "Persentase_Peningkatan": -80.0
+    },
+    {
+      "ID_Peserta": "PFT042",
+      "ID_Kegiatan": "KGT002",
+      "Nilai_PreTest": 60.0,
+      "Nilai_PostTest": 90.0,
+      "Persentase_Peningkatan": 50.0
+    },
+    {
+      "ID_Peserta": "PFT043",
+      "ID_Kegiatan": "KGT002",
+      "Nilai_PreTest": 60.0,
+      "Nilai_PostTest": 100.0,
+      "Persentase_Peningkatan": 66.67
+    },
+    {
+      "ID_Peserta": "PFT044",
+      "ID_Kegiatan": "KGT002",
+      "Nilai_PreTest": 60.0,
+      "Nilai_PostTest": 90.0,
+      "Persentase_Peningkatan": 50.0
+    },
+    {
+      "ID_Peserta": "PFT045",
+      "ID_Kegiatan": "KGT002",
+      "Nilai_PreTest": 70.0,
+      "Nilai_PostTest": 90.0,
+      "Persentase_Peningkatan": 28.57
+    },
+    {
+      "ID_Peserta": "PFT046",
+      "ID_Kegiatan": "KGT002",
+      "Nilai_PreTest": 70.0,
+      "Nilai_PostTest": 40.0,
+      "Persentase_Peningkatan": -42.86
+    },
+    {
+      "ID_Peserta": "PFT047",
+      "ID_Kegiatan": "KGT002",
+      "Nilai_PreTest": 80.0,
+      "Nilai_PostTest": 90.0,
+      "Persentase_Peningkatan": 12.5
+    },
+    {
+      "ID_Peserta": "PFT048",
+      "ID_Kegiatan": "KGT002",
+      "Nilai_PreTest": 90.0,
+      "Nilai_PostTest": 100.0,
+      "Persentase_Peningkatan": 11.11
+    },
+    {
+      "ID_Peserta": "PFT049",
+      "ID_Kegiatan": "KGT002",
+      "Nilai_PreTest": 90.0,
+      "Nilai_PostTest": 90.0,
+      "Persentase_Peningkatan": 0.0
+    },
+    {
+      "ID_Peserta": "PFT050",
+      "ID_Kegiatan": "KGT002",
+      "Nilai_PreTest": 90.0,
+      "Nilai_PostTest": 90.0,
+      "Persentase_Peningkatan": 0.0
+    },
+    {
+      "ID_Peserta": "PFT051",
+      "ID_Kegiatan": "KGT002",
+      "Nilai_PreTest": 90.0,
+      "Nilai_PostTest": 90.0,
+      "Persentase_Peningkatan": 0.0
+    },
+    {
+      "ID_Peserta": "PFT052",
+      "ID_Kegiatan": "KGT002",
+      "Nilai_PreTest": 100.0,
+      "Nilai_PostTest": 80.0,
+      "Persentase_Peningkatan": -20.0
+    },
+    {
+      "ID_Peserta": "PFT053",
+      "ID_Kegiatan": "KGT002",
+      "Nilai_PreTest": 100.0,
+      "Nilai_PostTest": 70.0,
+      "Persentase_Peningkatan": -30.0
+    }
+  ],
+  "feedback": [
+    {
+      "ID_Survei": "FB001",
+      "ID_Kegiatan": "KGT002",
+      "Rating_Materi": 5.0,
+      "Rating_Pemateri": 5.0,
+      "Rating_Panitia": null,
+      "Rating_Fasilitas": null,
+      "Rating_Keseluruhan": 5.0,
+      "Kritik_dan_Saran": "persiapan nya mungkin bisa lebih matang lagi"
+    },
+    {
+      "ID_Survei": "FB002",
+      "ID_Kegiatan": "KGT002",
+      "Rating_Materi": 4.0,
+      "Rating_Pemateri": 5.0,
+      "Rating_Panitia": null,
+      "Rating_Fasilitas": null,
+      "Rating_Keseluruhan": 4.0,
+      "Kritik_dan_Saran": "Mungkin bisa dihadirkan sebanyak mungkin "
+    },
+    {
+      "ID_Survei": "FB003",
+      "ID_Kegiatan": "KGT002",
+      "Rating_Materi": 4.0,
+      "Rating_Pemateri": 5.0,
+      "Rating_Panitia": null,
+      "Rating_Fasilitas": null,
+      "Rating_Keseluruhan": 4.0,
+      "Kritik_dan_Saran": "Tepat waktu "
+    },
+    {
+      "ID_Survei": "FB004",
+      "ID_Kegiatan": "KGT002",
+      "Rating_Materi": 5.0,
+      "Rating_Pemateri": 5.0,
+      "Rating_Panitia": null,
+      "Rating_Fasilitas": null,
+      "Rating_Keseluruhan": 5.0,
+      "Kritik_dan_Saran": "Peningkatan pastinya tentu ada semoga kegiatan nya makin bagus lagii tapi kemarin udah bagus kok, banget malah, kerennnn acaranya, semogaa bisa ikut lagi di kegiatan selanjutnya. Thank you for the experience. "
+    },
+    {
+      "ID_Survei": "FB005",
+      "ID_Kegiatan": "KGT002",
+      "Rating_Materi": 4.0,
+      "Rating_Pemateri": 3.0,
+      "Rating_Panitia": null,
+      "Rating_Fasilitas": null,
+      "Rating_Keseluruhan": 4.0,
+      "Kritik_dan_Saran": "Tentu masih ada yang perlu ditingkatkan, mungkin seperti pembawaan materi bisa dibuat lebih menarik dan tidak terasa datar saja."
+    },
+    {
+      "ID_Survei": "FB006",
+      "ID_Kegiatan": "KGT002",
+      "Rating_Materi": 3.0,
+      "Rating_Pemateri": 5.0,
+      "Rating_Panitia": null,
+      "Rating_Fasilitas": null,
+      "Rating_Keseluruhan": 4.0,
+      "Kritik_dan_Saran": "Secara overall sudah sangat bagus, mungkin butuh sedikit penyesuaian dan peningkatan untuk bagian pengaplikasian penggunaan Platform yang digunakan saja. "
+    },
+    {
+      "ID_Survei": "FB007",
+      "ID_Kegiatan": "KGT002",
+      "Rating_Materi": 5.0,
+      "Rating_Pemateri": 5.0,
+      "Rating_Panitia": null,
+      "Rating_Fasilitas": null,
+      "Rating_Keseluruhan": 4.0,
+      "Kritik_dan_Saran": "Pertahankan supaya kolaborasi seperti ini bisa terus berjalan, kerenn"
+    },
+    {
+      "ID_Survei": "FB008",
+      "ID_Kegiatan": "KGT002",
+      "Rating_Materi": 4.0,
+      "Rating_Pemateri": 5.0,
+      "Rating_Panitia": null,
+      "Rating_Fasilitas": null,
+      "Rating_Keseluruhan": 4.0,
+      "Kritik_dan_Saran": "kearah waktu pelaksanaannya yang mundur cukup lama, mungkin kedepannya bisa lebih tepat waktu :) "
+    },
+    {
+      "ID_Survei": "FB009",
+      "ID_Kegiatan": "KGT002",
+      "Rating_Materi": 5.0,
+      "Rating_Pemateri": 3.0,
+      "Rating_Panitia": null,
+      "Rating_Fasilitas": null,
+      "Rating_Keseluruhan": 4.0,
+      "Kritik_dan_Saran": "SEMOGA FINANCE TALK V2 LEBIH SERU LAGI"
+    },
+    {
+      "ID_Survei": "FB010",
+      "ID_Kegiatan": "KGT002",
+      "Rating_Materi": 5.0,
+      "Rating_Pemateri": 5.0,
+      "Rating_Panitia": null,
+      "Rating_Fasilitas": null,
+      "Rating_Keseluruhan": 5.0,
+      "Kritik_dan_Saran": "amaan"
+    },
+    {
+      "ID_Survei": "FB011",
+      "ID_Kegiatan": "KGT002",
+      "Rating_Materi": 5.0,
+      "Rating_Pemateri": 5.0,
+      "Rating_Panitia": null,
+      "Rating_Fasilitas": null,
+      "Rating_Keseluruhan": 5.0,
+      "Kritik_dan_Saran": "perbanyak lagi kegiatan\" yang membahas seputar ekonomi"
+    },
+    {
+      "ID_Survei": "FB012",
+      "ID_Kegiatan": "KGT002",
+      "Rating_Materi": 4.0,
+      "Rating_Pemateri": 5.0,
+      "Rating_Panitia": null,
+      "Rating_Fasilitas": null,
+      "Rating_Keseluruhan": 5.0,
+      "Kritik_dan_Saran": "peserta yang lebih banyak lagi dan juga pembawaan materi di sharing session bisa lebih lama lagi durasinya"
+    },
+    {
+      "ID_Survei": "FB013",
+      "ID_Kegiatan": "KGT002",
+      "Rating_Materi": 4.0,
+      "Rating_Pemateri": 5.0,
+      "Rating_Panitia": null,
+      "Rating_Fasilitas": null,
+      "Rating_Keseluruhan": 5.0,
+      "Kritik_dan_Saran": "keaktifan panitia dalam mempersiapkan acara"
+    },
+    {
+      "ID_Survei": "FB014",
+      "ID_Kegiatan": "KGT002",
+      "Rating_Materi": 5.0,
+      "Rating_Pemateri": 5.0,
+      "Rating_Panitia": null,
+      "Rating_Fasilitas": null,
+      "Rating_Keseluruhan": 5.0,
+      "Kritik_dan_Saran": "buat skala lebih besar"
+    },
+    {
+      "ID_Survei": "FB015",
+      "ID_Kegiatan": "KGT002",
+      "Rating_Materi": 4.0,
+      "Rating_Pemateri": 3.0,
+      "Rating_Panitia": null,
+      "Rating_Fasilitas": null,
+      "Rating_Keseluruhan": 4.0,
+      "Kritik_dan_Saran": "Sudah Kerennnn"
+    },
+    {
+      "ID_Survei": "FB016",
+      "ID_Kegiatan": "KGT002",
+      "Rating_Materi": 5.0,
+      "Rating_Pemateri": 5.0,
+      "Rating_Panitia": null,
+      "Rating_Fasilitas": null,
+      "Rating_Keseluruhan": 5.0,
+      "Kritik_dan_Saran": "persiapan kegiatannya lebih matang lagi, dan uasahakn sudah di siapkah jauh jauh hari"
+    },
+    {
+      "ID_Survei": "FB017",
+      "ID_Kegiatan": "KGT002",
+      "Rating_Materi": 4.0,
+      "Rating_Pemateri": 3.0,
+      "Rating_Panitia": null,
+      "Rating_Fasilitas": null,
+      "Rating_Keseluruhan": 4.0,
+      "Kritik_dan_Saran": "pesertanya di up lagi"
+    },
+    {
+      "ID_Survei": "FB018",
+      "ID_Kegiatan": "KGT003",
+      "Rating_Materi": 5.0,
+      "Rating_Pemateri": 5.0,
+      "Rating_Panitia": 5.0,
+      "Rating_Fasilitas": 5.0,
+      "Rating_Keseluruhan": 5.0,
+      "Kritik_dan_Saran": "Aman"
+    },
+    {
+      "ID_Survei": "FB019",
+      "ID_Kegiatan": "KGT003",
+      "Rating_Materi": 5.0,
+      "Rating_Pemateri": 5.0,
+      "Rating_Panitia": 5.0,
+      "Rating_Fasilitas": 5.0,
+      "Rating_Keseluruhan": 5.0,
+      "Kritik_dan_Saran": "merekrut calon peserta lebih banyak lagi karna daging semua ini materinya"
+    },
+    {
+      "ID_Survei": "FB020",
+      "ID_Kegiatan": "KGT003",
+      "Rating_Materi": 5.0,
+      "Rating_Pemateri": 5.0,
+      "Rating_Panitia": 3.0,
+      "Rating_Fasilitas": 5.0,
+      "Rating_Keseluruhan": 5.0,
+      "Kritik_dan_Saran": "semoga materi yang akan didapatkan bisa lebih banyak sesuai kebutuhan kepengurusan"
+    },
+    {
+      "ID_Survei": "FB021",
+      "ID_Kegiatan": "KGT003",
+      "Rating_Materi": 4.0,
+      "Rating_Pemateri": 3.0,
+      "Rating_Panitia": 3.0,
+      "Rating_Fasilitas": 5.0,
+      "Rating_Keseluruhan": 4.0,
+      "Kritik_dan_Saran": "lebih banyak panitia yg aktif"
+    },
+    {
+      "ID_Survei": "FB022",
+      "ID_Kegiatan": "KGT003",
+      "Rating_Materi": 5.0,
+      "Rating_Pemateri": 5.0,
+      "Rating_Panitia": 5.0,
+      "Rating_Fasilitas": 5.0,
+      "Rating_Keseluruhan": 5.0,
+      "Kritik_dan_Saran": "-"
+    },
+    {
+      "ID_Survei": "FB023",
+      "ID_Kegiatan": "KGT003",
+      "Rating_Materi": 5.0,
+      "Rating_Pemateri": 5.0,
+      "Rating_Panitia": 4.0,
+      "Rating_Fasilitas": 5.0,
+      "Rating_Keseluruhan": 4.0,
+      "Kritik_dan_Saran": "Mencptakan kondisi forum yang lebih formal tetapi tetap santai"
+    },
+    {
+      "ID_Survei": "FB024",
+      "ID_Kegiatan": "KGT004",
+      "Rating_Materi": 5.0,
+      "Rating_Pemateri": 5.0,
+      "Rating_Panitia": null,
+      "Rating_Fasilitas": null,
+      "Rating_Keseluruhan": 5.0,
+      "Kritik_dan_Saran": "amaan"
+    },
+    {
+      "ID_Survei": "FB025",
+      "ID_Kegiatan": "KGT004",
+      "Rating_Materi": 5.0,
+      "Rating_Pemateri": 4.0,
+      "Rating_Panitia": null,
+      "Rating_Fasilitas": null,
+      "Rating_Keseluruhan": 4.0,
+      "Kritik_dan_Saran": "semoga peserta nya bisa lebih massif "
+    },
+    {
+      "ID_Survei": "FB026",
+      "ID_Kegiatan": "KGT004",
+      "Rating_Materi": 5.0,
+      "Rating_Pemateri": 5.0,
+      "Rating_Panitia": null,
+      "Rating_Fasilitas": null,
+      "Rating_Keseluruhan": 5.0,
+      "Kritik_dan_Saran": "sering adain kelas "
+    },
+    {
+      "ID_Survei": "FB027",
+      "ID_Kegiatan": "KGT004",
+      "Rating_Materi": 5.0,
+      "Rating_Pemateri": 5.0,
+      "Rating_Panitia": null,
+      "Rating_Fasilitas": null,
+      "Rating_Keseluruhan": 5.0,
+      "Kritik_dan_Saran": "."
+    },
+    {
+      "ID_Survei": "FB028",
+      "ID_Kegiatan": "KGT004",
+      "Rating_Materi": 5.0,
+      "Rating_Pemateri": 5.0,
+      "Rating_Panitia": null,
+      "Rating_Fasilitas": null,
+      "Rating_Keseluruhan": 4.0,
+      "Kritik_dan_Saran": "buat skala lebih besar dengan publikasi lebih awal "
+    },
+    {
+      "ID_Survei": "FB029",
+      "ID_Kegiatan": "KGT004",
+      "Rating_Materi": 4.0,
+      "Rating_Pemateri": 4.0,
+      "Rating_Panitia": null,
+      "Rating_Fasilitas": null,
+      "Rating_Keseluruhan": 4.0,
+      "Kritik_dan_Saran": "Lebih bertahap dan berkala agar materi dan praktik bisa lebih maksimal"
+    },
+    {
+      "ID_Survei": "FB030",
+      "ID_Kegiatan": "KGT004",
+      "Rating_Materi": 5.0,
+      "Rating_Pemateri": 5.0,
+      "Rating_Panitia": null,
+      "Rating_Fasilitas": null,
+      "Rating_Keseluruhan": 4.0,
+      "Kritik_dan_Saran": "saran agar perbanyak materi teknisnya "
+    },
+    {
+      "ID_Survei": "FB031",
+      "ID_Kegiatan": "KGT005",
+      "Rating_Materi": null,
+      "Rating_Pemateri": null,
+      "Rating_Panitia": null,
+      "Rating_Fasilitas": null,
+      "Rating_Keseluruhan": 5.0,
+      "Kritik_dan_Saran": "tidak adaa"
+    },
+    {
+      "ID_Survei": "FB032",
+      "ID_Kegiatan": "KGT005",
+      "Rating_Materi": null,
+      "Rating_Pemateri": null,
+      "Rating_Panitia": null,
+      "Rating_Fasilitas": null,
+      "Rating_Keseluruhan": 5.0,
+      "Kritik_dan_Saran": "saran lokasi di kaki gunung"
+    },
+    {
+      "ID_Survei": "FB033",
+      "ID_Kegiatan": "KGT005",
+      "Rating_Materi": null,
+      "Rating_Pemateri": null,
+      "Rating_Panitia": null,
+      "Rating_Fasilitas": null,
+      "Rating_Keseluruhan": 3.0,
+      "Kritik_dan_Saran": "."
+    },
+    {
+      "ID_Survei": "FB034",
+      "ID_Kegiatan": "KGT005",
+      "Rating_Materi": null,
+      "Rating_Pemateri": null,
+      "Rating_Panitia": null,
+      "Rating_Fasilitas": null,
+      "Rating_Keseluruhan": 5.0,
+      "Kritik_dan_Saran": "-"
+    },
+    {
+      "ID_Survei": "FB035",
+      "ID_Kegiatan": "KGT005",
+      "Rating_Materi": null,
+      "Rating_Pemateri": null,
+      "Rating_Panitia": null,
+      "Rating_Fasilitas": null,
+      "Rating_Keseluruhan": 4.0,
+      "Kritik_dan_Saran": "Kasih Lebih Zeruu"
+    },
+    {
+      "ID_Survei": "FB036",
+      "ID_Kegiatan": "KGT005",
+      "Rating_Materi": null,
+      "Rating_Pemateri": null,
+      "Rating_Panitia": null,
+      "Rating_Fasilitas": null,
+      "Rating_Keseluruhan": 4.0,
+      "Kritik_dan_Saran": "saran agar tempatnya yang lebih bagus ke depannya"
+    }
+  ]
+}

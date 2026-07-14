@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 222 47% 8%;
+    --foreground: 210 40% 98%;
+    --card: 222 47% 11%;
+    --card-foreground: 210 40% 98%;
+    --primary: 43 96% 56%;
+    --primary-foreground: 222 47% 8%;
+    --secondary: 217 91% 60%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 217 33% 17%;
+    --muted-foreground: 215 20% 65%;
+    --accent: 217 33% 17%;
+    --accent-foreground: 210 40% 98%;
+    --destructive: 0 62% 50%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 217 33% 20%;
+    --input: 217 33% 17%;
+    --ring: 43 96% 56%;
+    --radius: 0.75rem;
+  }
+
+  * {
+    @apply border-border;
+    box-sizing: border-box;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans;
+    font-family: 'Inter', system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: hsl(222 47% 8%);
+  }
+  ::-webkit-scrollbar-thumb {
+    background: hsl(217 33% 25%);
+    border-radius: 3px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: hsl(43 96% 56% / 0.6);
+  }
+}
+
+@layer components {
+  .glass-card {
+    background: linear-gradient(145deg, rgba(255,255,255,0.06) 0%, rgba(255,255,255,0.02) 100%);
+    border: 1px solid rgba(255,255,255,0.08);
+    backdrop-filter: blur(10px);
+    @apply rounded-xl;
+  }
+
+  .kpi-card-gold {
+    background: linear-gradient(135deg, #a16207 0%, #d4a017 40%, #f5c842 100%);
+    @apply rounded-xl shadow-glow;
+  }
+
+  .kpi-card-dark {
+    background: linear-gradient(145deg, #1e2a3d 0%, #162035 100%);
+    border: 1px solid rgba(255,255,255,0.08);
+    @apply rounded-xl;
+  }
+
+  .sidebar-item {
+    @apply flex items-center gap-3 px-4 py-3 rounded-lg cursor-pointer transition-all duration-200;
+  }
+
+  .sidebar-item:hover {
+    background: rgba(212, 160, 23, 0.1);
+  }
+
+  .sidebar-item.active {
+    background: linear-gradient(135deg, #d4a017 0%, #f5c842 100%);
+    color: #1a1f2e;
+    font-weight: 600;
+  }
+
+  .chart-container {
+    @apply glass-card p-4;
+  }
+
+  .section-title {
+    @apply text-sm font-semibold text-muted-foreground uppercase tracking-wider mb-3;
+  }
+
+  .badge-gold {
+    background: rgba(212,160,23,0.15);
+    color: #f5c842;
+    border: 1px solid rgba(212,160,23,0.3);
+    @apply text-xs px-2 py-1 rounded-md;
+  }
+
+  .badge-blue {
+    background: rgba(59,130,246,0.15);
+    color: #60a5fa;
+    border: 1px solid rgba(59,130,246,0.3);
+    @apply text-xs px-2 py-1 rounded-md;
+  }
+
+  .animate-on-load {
+    animation: fadeIn 0.4s ease-out forwards;
+  }
+}
+
+/* Chart tooltip overrides */
+.recharts-tooltip-wrapper .recharts-default-tooltip {
+  background: #1a2744 !important;
+  border: 1px solid rgba(255,255,255,0.1) !important;
+  border-radius: 8px !important;
+  color: #fff !important;
+}
+
+/* Table styles */
+.data-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+.data-table th {
+  background: rgba(212,160,23,0.1);
+  color: #f5c842;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+  text-align: left;
+}
+
+.data-table td {
+  padding: 0.625rem 1rem;
+  font-size: 0.875rem;
+  border-bottom: 1px solid rgba(255,255,255,0.04);
+  color: rgba(255,255,255,0.85);
+}
+
+.data-table tr:hover td {
+  background: rgba(255,255,255,0.03);
+}
