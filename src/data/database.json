@@ -1085,6 +1085,55 @@
       "Nama": "Vio",
       "Program_Studi": null,
       "Universitas": null
+    },
+    {
+      "ID_Peserta": "PDC047",
+      "ID_Kegiatan": "KGT005",
+      "Nama": "Rara",
+      "Program_Studi": null,
+      "Universitas": null
+    },
+    {
+      "ID_Peserta": "PDC048",
+      "ID_Kegiatan": "KGT005",
+      "Nama": "Fia",
+      "Program_Studi": null,
+      "Universitas": null
+    },
+    {
+      "ID_Peserta": "PDC049",
+      "ID_Kegiatan": "KGT005",
+      "Nama": "Dila",
+      "Program_Studi": null,
+      "Universitas": null
+    },
+    {
+      "ID_Peserta": "PDC050",
+      "ID_Kegiatan": "KGT005",
+      "Nama": "Nona",
+      "Program_Studi": null,
+      "Universitas": null
+    },
+    {
+      "ID_Peserta": "PDC051",
+      "ID_Kegiatan": "KGT005",
+      "Nama": "Putra",
+      "Program_Studi": null,
+      "Universitas": null
+    },
+    {
+      "ID_Peserta": "PDC052",
+      "ID_Kegiatan": "KGT005",
+      "Nama": "Roni",
+      "Program_Studi": null,
+      "Universitas": null
+    },
+    {
+      "ID_Peserta": "PDC053",
+      "ID_Kegiatan": "KGT005",
+      "Nama": "Siti",
+      "Program_Studi": null,
+      "Universitas": null
     }
   ],
   "pesertaTOT": [
@@ -2140,6 +2189,116 @@
       "Rating_Fasilitas": null,
       "Rating_Keseluruhan": 4,
       "Kritik_dan_Saran": "saran agar tempatnya yang lebih bagus ke depannya"
+    },
+    {
+      "ID_Survei": "FB037",
+      "ID_Kegiatan": "KGT001",
+      "Rating_Materi": 4,
+      "Rating_Pemateri": 5,
+      "Rating_Panitia": 5,
+      "Rating_Fasilitas": null,
+      "Rating_Keseluruhan": 5,
+      "Kritik_dan_Saran": "Sarana proyektor"
+    },
+    {
+      "ID_Survei": "FB038",
+      "ID_Kegiatan": "KGT001",
+      "Rating_Materi": 4,
+      "Rating_Pemateri": 5,
+      "Rating_Panitia": 5,
+      "Rating_Fasilitas": null,
+      "Rating_Keseluruhan": 5,
+      "Kritik_dan_Saran": "mantap"
+    },
+    {
+      "ID_Survei": "FB039",
+      "ID_Kegiatan": "KGT001",
+      "Rating_Materi": 3,
+      "Rating_Pemateri": 4,
+      "Rating_Panitia": 5,
+      "Rating_Fasilitas": null,
+      "Rating_Keseluruhan": 4,
+      "Kritik_dan_Saran": "sudah bagus"
+    },
+    {
+      "ID_Survei": "FB040",
+      "ID_Kegiatan": "KGT001",
+      "Rating_Materi": 4,
+      "Rating_Pemateri": 5,
+      "Rating_Panitia": 5,
+      "Rating_Fasilitas": null,
+      "Rating_Keseluruhan": 5,
+      "Kritik_dan_Saran": "Lakukan sering"
+    },
+    {
+      "ID_Survei": "FB041",
+      "ID_Kegiatan": "KGT001",
+      "Rating_Materi": 3,
+      "Rating_Pemateri": 4,
+      "Rating_Panitia": 4,
+      "Rating_Fasilitas": null,
+      "Rating_Keseluruhan": 4,
+      "Kritik_dan_Saran": "Lebih memantapkan materi pada level lebih lanjut"
+    },
+    {
+      "ID_Survei": "FB042",
+      "ID_Kegiatan": "KGT001",
+      "Rating_Materi": 4,
+      "Rating_Pemateri": 5,
+      "Rating_Panitia": 5,
+      "Rating_Fasilitas": null,
+      "Rating_Keseluruhan": 4,
+      "Kritik_dan_Saran": "Sesi praktek di tambah"
+    },
+    {
+      "ID_Survei": "FB043",
+      "ID_Kegiatan": "KGT001",
+      "Rating_Materi": 4,
+      "Rating_Pemateri": 4,
+      "Rating_Panitia": 4,
+      "Rating_Fasilitas": null,
+      "Rating_Keseluruhan": 4,
+      "Kritik_dan_Saran": "Sesi pendampingannya dijadwalkan offline"
+    },
+    {
+      "ID_Survei": "FB044",
+      "ID_Kegiatan": "KGT001",
+      "Rating_Materi": 4,
+      "Rating_Pemateri": 4,
+      "Rating_Panitia": 4,
+      "Rating_Fasilitas": null,
+      "Rating_Keseluruhan": 5,
+      "Kritik_dan_Saran": "Panitia lebih banyak lagi menyesuaikan dgn kebutuhan peserta"
+    },
+    {
+      "ID_Survei": "FB045",
+      "ID_Kegiatan": "KGT001",
+      "Rating_Materi": 4,
+      "Rating_Pemateri": 4,
+      "Rating_Panitia": 5,
+      "Rating_Fasilitas": null,
+      "Rating_Keseluruhan": 5,
+      "Kritik_dan_Saran": "dibuat lebih fun lagii dan perbanyak pendamping"
+    },
+    {
+      "ID_Survei": "FB046",
+      "ID_Kegiatan": "KGT001",
+      "Rating_Materi": 4,
+      "Rating_Pemateri": 5,
+      "Rating_Panitia": 5,
+      "Rating_Fasilitas": null,
+      "Rating_Keseluruhan": 4,
+      "Kritik_dan_Saran": "Bisa kolaborasi dgn pemateri eksternal dan mengadakan kegiatan diluar kampus"
+    },
+    {
+      "ID_Survei": "FB047",
+      "ID_Kegiatan": "KGT001",
+      "Rating_Materi": 4,
+      "Rating_Pemateri": 5,
+      "Rating_Panitia": 5,
+      "Rating_Fasilitas": null,
+      "Rating_Keseluruhan": 5,
+      "Kritik_dan_Saran": "pendampingannya bisa dilanjut gmeet rutin"
     }
   ]
 }

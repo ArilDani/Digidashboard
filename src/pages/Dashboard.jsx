@@ -1,7 +1,7 @@
 import React, { useState, useMemo } from 'react';
 import {
   Users, ClipboardList, TrendingUp, Award, Star,
-  Info, ChevronDown, Layers, GraduationCap
+  Info, ChevronDown, Layers, GraduationCap, ClipboardCheck
 } from 'lucide-react';
 import { KPICard } from '../components/KPICard';
 import { ScoreDistributionBarChart, FeedbackBarChart } from '../components/charts/BarCharts';
@@ -145,7 +145,7 @@ export default function Dashboard({ selectedKegiatanId }) {
       });
     }
 
-    // ── Card 4: Gain / Status Kegiatan ────────────────────────────────────────
+    // ── Card 4: Gain / CSC Project / Status Kegiatan ─────────────────────────
     if (kpis.hasTest) {
       cards.push({
         title: 'Peningkatan (Gain)',
@@ -154,6 +154,15 @@ export default function Dashboard({ selectedKegiatanId }) {
         icon: TrendingUp,
         variant: 'dark',
         trend: kpis.gainPct,
+      });
+    } else if (kpis.isCSC && kpis.cscPengumpulanProject) {
+      const { dikumpulkan, total } = kpis.cscPengumpulanProject;
+      cards.push({
+        title: 'Pengumpulan Project',
+        value: `${dikumpulkan}/${total}`,
+        subtitle: `${Math.round((dikumpulkan / total) * 100)}% peserta mengumpulkan`,
+        icon: ClipboardCheck,
+        variant: 'dark',
       });
     } else {
       cards.push({

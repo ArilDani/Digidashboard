@@ -54,6 +54,9 @@ export function computeKPIs(id) {
   // 1. Total Peserta — selalu dari sheet peserta, kecuali Finance Talk (KGT002) di-hardcode 74
   let totalPeserta = ps.length;
   if (id === 'KGT002') totalPeserta = 74;
+
+  // CSC (KGT004) KPI: Pengumpulan Project
+  const cscPengumpulanProject = id === 'KGT004' ? { dikumpulkan: 18, total: 18 } : null;
   
   const targetPeserta = kg.Target_Peserta;
 
@@ -102,7 +105,9 @@ export function computeKPIs(id) {
     preLabel: avgPre !== null ? pctLabel(avgPre) : '',
     postLabel: avgPost !== null ? pctLabel(avgPost) : '',
     isTOT: id === 'KGT003',
+    isCSC: id === 'KGT004',
     totKelulusan,
+    cscPengumpulanProject,
     namaKegiatan: kg.Nama_Kegiatan,
     penyelenggara: kg.Penyelenggara,
     ratingPanitia,
@@ -323,8 +328,8 @@ export function generateInsights(id) {
       }
     }
 
-    // Insight khusus KGT004 (CSC) dan KGT005 (Digicamp) menggunakan data Panitia & Fasilitas
-    if (id === 'KGT004' || id === 'KGT005') {
+    // Insight khusus KGT001 (Data Bridge), KGT004 (CSC) dan KGT005 (Digicamp) menggunakan data Panitia & Fasilitas
+    if (id === 'KGT001' || id === 'KGT004' || id === 'KGT005') {
       if (kpis.ratingPanitia !== null) {
         insights.push({
           type: kpis.ratingPanitia >= 4.0 ? 'success' : 'warning',
