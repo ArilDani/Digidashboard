@@ -1,6 +1,6 @@
 import db from '../data/database.json';
 
-export const { kegiatan, peserta, prepost, feedback } = db;
+export const { kegiatan, peserta, pesertaTOT, prepost, feedback } = db;
 
 // ── helpers ──────────────────────────────────────────────────────────────────
 export const avg = (arr) => arr.length ? arr.reduce((a, b) => a + b, 0) / arr.length : 0;
@@ -18,6 +18,8 @@ export function getKegiatanById(id) {
 }
 
 export function getPesertaByKegiatan(id) {
+  // Untuk TOT (KGT003), data peserta ada di pesertaTOT
+  if (id === 'KGT003') return pesertaTOT.filter((p) => p.ID_Kegiatan === id);
   return peserta.filter((p) => p.ID_Kegiatan === id);
 }
 
@@ -27,6 +29,16 @@ export function getPrepostByKegiatan(id) {
 
 export function getFeedbackByKegiatan(id) {
   return feedback.filter((f) => f.ID_Kegiatan === id);
+}
+
+// ── TOT Kelulusan ──────────────────────────────────────────────────────────────
+export function getTOTKelulusan(id) {
+  if (id !== 'KGT003') return null;
+  const ps = pesertaTOT.filter((p) => p.ID_Kegiatan === id);
+  const lulus = ps.filter((p) => p.Status_Kelulusan === 'Lulus').length;
+  const total = ps.length;
+  const pctLulus = total > 0 ? round2((lulus / total) * 100) : 0;
+  return { lulus, tidakLulus: total - lulus, total, pctLulus };
 }
 
 // ── KPI computations ──────────────────────────────────────────────────────────
@@ -39,8 +51,10 @@ export function computeKPIs(id) {
   const hasTest = pt.length > 0;
   const hasFeedback = fb.length > 0;
 
-  // 1. Total Peserta
-  const totalPeserta = ps.length || fb.length;
+  // 1. Total Peserta — selalu dari sheet peserta, kecuali Finance Talk (KGT002) di-hardcode 74
+  let totalPeserta = ps.length;
+  if (id === 'KGT002') totalPeserta = 74;
+  
   const targetPeserta = kg.Target_Peserta;
 
   // 2. Pre-test avg
@@ -65,8 +79,16 @@ export function computeKPIs(id) {
   // extra for no-test cards
   const matVals = fb.map((f) => f.Rating_Materi).filter((v) => v !== null);
   const pematVals = fb.map((f) => f.Rating_Pemateri).filter((v) => v !== null);
+  const panitiaVals = fb.map((f) => f.Rating_Panitia).filter((v) => v !== null && typeof v === 'number');
+  const fasilitasVals = fb.map((f) => f.Rating_Fasilitas).filter((v) => v !== null && typeof v === 'number');
+
   const ratingMateri = matVals.length > 0 ? round2(avg(matVals)) : null;
   const ratingPemateri = pematVals.length > 0 ? round2(avg(pematVals)) : null;
+  const ratingPanitia = panitiaVals.length > 0 ? round2(avg(panitiaVals)) : null;
+  const ratingFasilitas = fasilitasVals.length > 0 ? round2(avg(fasilitasVals)) : null;
+
+  // 6. TOT Kelulusan (khusus KGT003)
+  const totKelulusan = getTOTKelulusan(id);
 
   return {
     hasTest, hasFeedback,
@@ -79,6 +101,12 @@ export function computeKPIs(id) {
     status: kg.Status,
     preLabel: avgPre !== null ? pctLabel(avgPre) : '',
     postLabel: avgPost !== null ? pctLabel(avgPost) : '',
+    isTOT: id === 'KGT003',
+    totKelulusan,
+    namaKegiatan: kg.Nama_Kegiatan,
+    penyelenggara: kg.Penyelenggara,
+    ratingPanitia,
+    ratingFasilitas,
   };
 }
 
@@ -116,6 +144,16 @@ export function getImprovementDonutData(id) {
     { name: 'Meningkat (5% - 20%)', value: meningkat, pct: round2(meningkat/total*100), color: '#3b82f6' },
     { name: 'Tidak Berubah (-5% - 5%)', value: tidakBerubah, pct: round2(tidakBerubah/total*100), color: '#6b7280' },
     { name: 'Menurun (< -5%)', value: menurun, pct: round2(menurun/total*100), color: '#ef4444' },
+  ];
+}
+
+// TOT Kelulusan Donut
+export function getTOTKelulusanDonutData(id) {
+  const kelulusan = getTOTKelulusan(id);
+  if (!kelulusan) return [];
+  return [
+    { name: 'Lulus', value: kelulusan.lulus, pct: round2(kelulusan.lulus / kelulusan.total * 100), color: '#10b981' },
+    { name: 'Tidak Lulus', value: kelulusan.tidakLulus, pct: round2(kelulusan.tidakLulus / kelulusan.total * 100), color: '#ef4444' },
   ];
 }
 
@@ -216,6 +254,24 @@ export function generateInsights(id) {
   const kpis = computeKPIs(id);
   const insights = [];
 
+  // TOT: KPI kelulusan
+  if (kpis.isTOT && kpis.totKelulusan) {
+    const { pctLulus, lulus, total } = kpis.totKelulusan;
+    if (pctLulus >= 80) {
+      insights.push({
+        type: 'success',
+        title: 'Target Kelulusan TOT Tercapai',
+        desc: `${lulus} dari ${total} peserta lulus (${pctLulus}%). Target 80% berhasil tercapai! 🎉`,
+      });
+    } else {
+      insights.push({
+        type: 'warning',
+        title: 'Target Kelulusan TOT Belum Tercapai',
+        desc: `${lulus} dari ${total} peserta lulus (${pctLulus}%). Target 80% belum tercapai. Perlu evaluasi kurikulum dan seleksi peserta.`,
+      });
+    }
+  }
+
   if (kpis.hasTest) {
     if (kpis.gainPct !== null && kpis.gainPct > 10) {
       insights.push({
@@ -266,6 +322,24 @@ export function generateInsights(id) {
         });
       }
     }
+
+    // Insight khusus KGT004 (CSC) dan KGT005 (Digicamp) menggunakan data Panitia & Fasilitas
+    if (id === 'KGT004' || id === 'KGT005') {
+      if (kpis.ratingPanitia !== null) {
+        insights.push({
+          type: kpis.ratingPanitia >= 4.0 ? 'success' : 'warning',
+          title: 'Kinerja Panitia',
+          desc: `Penilaian kinerja panitia: ${kpis.ratingPanitia}/5. ${kpis.ratingPanitia >= 4.0 ? 'Peserta merasa sangat terbantu oleh panitia pelaksana.' : 'Perlu perbaikan dalam manajemen acara dan kordinasi panitia.'}`,
+        });
+      }
+      if (kpis.ratingFasilitas !== null) {
+        insights.push({
+          type: kpis.ratingFasilitas >= 4.0 ? 'star' : 'tip',
+          title: 'Fasilitas Kegiatan',
+          desc: `Rating fasilitas yang disediakan: ${kpis.ratingFasilitas}/5. ${kpis.ratingFasilitas >= 4.0 ? 'Fasilitas sangat memadai.' : 'Beberapa peserta mengeluhkan fasilitas, harap disiapkan lebih baik pada sesi berikutnya.'}`,
+        });
+      }
+    }
   }
 
   if (kpis.status === 'belum selesai') {
@@ -290,7 +364,8 @@ export function generateInsights(id) {
 
 // ── Summary stats (all kegiatan) ──────────────────────────────────────────────
 export function getSummaryStats() {
-  const totalPeserta = peserta.length;
+  // Total peserta: gabungan peserta biasa + pesertaTOT
+  const totalPeserta = peserta.length + pesertaTOT.length;
   const totalKeg = kegiatan.length;
   const selesai = kegiatan.filter((k) => k.Status === 'Selesai').length;
 
@@ -306,24 +381,19 @@ export function getSummaryStats() {
 }
 
 // ── All data table ──────────────────────────────────────────────────────────
+// Data proker: tampilkan data feedback (tanpa ID/Nama Peserta)
 export function getAllDataTable() {
-  return peserta.map((p) => {
-    const kg = kegiatan.find((k) => k.ID_Kegiatan === p.ID_Kegiatan);
-    const pt = prepost.find((t) => t.ID_Peserta === p.ID_Peserta);
-    const fb = feedback.find((f) => f.ID_Kegiatan === p.ID_Kegiatan);
+  return feedback.map((f) => {
+    const kg = kegiatan.find((k) => k.ID_Kegiatan === f.ID_Kegiatan);
     return {
-      ID_Peserta: p.ID_Peserta,
-      Nama: p.Nama,
-      Divisi_atau_Status: p.Divisi_atau_Status,
-      Program_Studi: p.Program_Studi,
-      Universitas: p.Universitas,
       Nama_Kegiatan: kg ? kg.Nama_Kegiatan : '-',
       Jenis_Kegiatan: kg ? kg.Jenis_Kegiatan : '-',
-      Status: kg ? kg.Status : '-',
-      Nilai_PreTest: pt ? pt.Nilai_PreTest : '-',
-      Nilai_PostTest: pt ? pt.Nilai_PostTest : '-',
-      Peningkatan: pt && pt.Persentase_Peningkatan !== null ? `${pt.Persentase_Peningkatan}%` : '-',
-      Rating_Keseluruhan: fb ? fb.Rating_Keseluruhan : '-',
+      Rating_Materi: f.Rating_Materi ?? '-',
+      Rating_Pemateri: f.Rating_Pemateri ?? '-',
+      Rating_Panitia: f.Rating_Panitia ?? '-',
+      Rating_Fasilitas: f.Rating_Fasilitas ?? '-',
+      Rating_Keseluruhan: f.Rating_Keseluruhan ?? '-',
+      Kritik_dan_Saran: f.Kritik_dan_Saran ?? '-',
     };
   });
 }

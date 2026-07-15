@@ -32,42 +32,22 @@ export default function DataProker({ selectedKegiatanId }) {
     else { setSortKey(key); setSortDir('asc'); }
   };
 
+  // Kolom: tampilkan data feedback
   const columns = [
-    { key: 'ID_Peserta', label: 'ID' },
-    { key: 'Nama', label: 'Nama Peserta' },
     { key: 'Nama_Kegiatan', label: 'Kegiatan' },
     { key: 'Jenis_Kegiatan', label: 'Jenis' },
-    { key: 'Divisi_atau_Status', label: 'Divisi' },
-    { key: 'Program_Studi', label: 'Prodi' },
-    { key: 'Universitas', label: 'Univ' },
-    { key: 'Nilai_PreTest', label: 'Pre Test' },
-    { key: 'Nilai_PostTest', label: 'Post Test' },
-    { key: 'Peningkatan', label: 'Gain' },
-    { key: 'Rating_Keseluruhan', label: 'Rating' },
-    { key: 'Status', label: 'Status' },
+    { key: 'Rating_Materi', label: 'Materi' },
+    { key: 'Rating_Pemateri', label: 'Pemateri' },
+    { key: 'Rating_Panitia', label: 'Panitia' },
+    { key: 'Rating_Fasilitas', label: 'Fasilitas' },
+    { key: 'Rating_Keseluruhan', label: 'Keseluruhan' },
+    { key: 'Kritik_dan_Saran', label: 'Kritik & Saran' },
   ];
-
-  const statusStyle = (val) => {
-    if (val === 'Selesai') return { color: '#10b981' };
-    if (val === 'belum selesai') return { color: '#f59e0b' };
-    return {};
-  };
-
-  const numStyle = (col, val) => {
-    if (['Nilai_PreTest', 'Nilai_PostTest'].includes(col) && val !== '-') {
-      const n = parseFloat(val);
-      if (n >= 80) return { color: '#10b981', fontWeight: 600 };
-      if (n >= 60) return { color: '#f5c842', fontWeight: 600 };
-      return { color: '#f87171', fontWeight: 600 };
-    }
-    return {};
-  };
-
   return (
     <div className="flex flex-col gap-4 animate-on-load">
       <div>
         <h2 className="text-xl font-bold text-white">Data Proker</h2>
-        <p className="text-xs text-muted-foreground mt-0.5">Semua data peserta dan nilai dari seluruh kegiatan</p>
+        <p className="text-xs text-muted-foreground mt-0.5">Semua data peserta dari seluruh kegiatan</p>
       </div>
 
       {/* Controls */}
@@ -77,7 +57,7 @@ export default function DataProker({ selectedKegiatanId }) {
           <Search size={14} className="text-muted-foreground flex-shrink-0" />
           <input
             type="text"
-            placeholder="Cari peserta, kegiatan..."
+            placeholder="Cari kegiatan, divisi..."
             value={search}
             onChange={e => setSearch(e.target.value)}
             className="bg-transparent outline-none text-sm text-white placeholder:text-muted-foreground flex-1"
@@ -143,10 +123,7 @@ export default function DataProker({ selectedKegiatanId }) {
                   <tr key={i}>
                     <td className="sticky left-0 text-muted-foreground text-xs" style={{ background: '#111520' }}>{i + 1}</td>
                     {columns.map(col => (
-                      <td key={col.key} className="whitespace-nowrap" style={{
-                        ...statusStyle(col.key === 'Status' ? row[col.key] : null),
-                        ...numStyle(col.key, row[col.key]),
-                      }}>
+                      <td key={col.key} className="whitespace-nowrap">
                         {col.key === 'Jenis_Kegiatan' ? (
                           <span className={row[col.key] === 'Proker' ? 'badge-gold' : 'badge-blue'}>
                             {row[col.key]}

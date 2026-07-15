@@ -1,7 +1,7 @@
 import React, { useState, useMemo } from 'react';
 import {
   Users, ClipboardList, TrendingUp, Award, Star,
-  Info, ChevronDown, Layers
+  Info, ChevronDown, Layers, GraduationCap
 } from 'lucide-react';
 import { KPICard } from '../components/KPICard';
 import { ScoreDistributionBarChart, FeedbackBarChart } from '../components/charts/BarCharts';
@@ -14,6 +14,7 @@ import {
   computeKPIs,
   getScoreDistributionChart,
   getImprovementDonutData,
+  getTOTKelulusanDonutData,
   getFeedbackRadarData,
   getScoreTrendAllData,
   getRatingTrendAllData,
@@ -57,6 +58,7 @@ export default function Dashboard({ selectedKegiatanId }) {
   const kpis = useMemo(() => computeKPIs(selectedKegiatanId), [selectedKegiatanId]);
   const scoreDistData = useMemo(() => getScoreDistributionChart(selectedKegiatanId), [selectedKegiatanId]);
   const donutData = useMemo(() => getImprovementDonutData(selectedKegiatanId), [selectedKegiatanId]);
+  const totDonutData = useMemo(() => getTOTKelulusanDonutData(selectedKegiatanId), [selectedKegiatanId]);
   const radarData = useMemo(() => getFeedbackRadarData(selectedKegiatanId), [selectedKegiatanId]);
   const scoreTrend = useMemo(() => getScoreTrendAllData(), []);
   const ratingTrend = useMemo(() => getRatingTrendAllData(), []);
@@ -69,16 +71,27 @@ export default function Dashboard({ selectedKegiatanId }) {
   const kpiCards = useMemo(() => {
     const cards = [];
 
-    // 1. Total Peserta
-    cards.push({
-      title: 'Total Peserta',
-      value: kpis.totalPeserta,
-      subtitle: `Target: ${kpis.targetPeserta}`,
-      icon: Users,
-      variant: 'gold',
-    });
+    // ── Card 1: Peserta ───────────────────────────────────────────────────────
+    if (kpis.isTOT && kpis.totKelulusan) {
+      const { lulus, total, pctLulus } = kpis.totKelulusan;
+      cards.push({
+        title: 'Total Peserta TOT',
+        value: total,
+        subtitle: `Lulus: ${lulus}/${total} (${pctLulus}%) — Target ≥80%`,
+        icon: GraduationCap,
+        variant: 'gold',
+      });
+    } else {
+      cards.push({
+        title: 'Total Peserta',
+        value: kpis.totalPeserta,
+        subtitle: `Target: ${kpis.targetPeserta}`,
+        icon: Users,
+        variant: 'gold',
+      });
+    }
 
-    // 2. Pre Test atau Rating Materi
+    // ── Card 2: Nilai Pre Test / Rating Materi / Jenis Kegiatan ──────────────
     if (kpis.hasTest) {
       cards.push({
         title: 'Rata-rata Pre Test',
@@ -91,21 +104,21 @@ export default function Dashboard({ selectedKegiatanId }) {
       cards.push({
         title: 'Rating Materi',
         value: `${kpis.ratingMateri}/5`,
-        subtitle: kpis.ratingMateri >= 4.5 ? 'Kategori: Sangat Baik' : 'Kategori: Baik',
+        subtitle: kpis.ratingMateri >= 4.5 ? 'Kategori: Sangat Baik' : kpis.ratingMateri >= 4.0 ? 'Kategori: Baik' : 'Kategori: Cukup',
         icon: ClipboardList,
         variant: 'dark',
       });
     } else {
       cards.push({
-        title: 'Jumlah Sesi',
-        value: kpis.jumlahPelaksanaan ?? '-',
-        subtitle: `Jenis: ${kpis.jenisKegiatan}`,
+        title: 'Jenis Kegiatan',
+        value: kpis.jenisKegiatan,
+        subtitle: `Penyelenggara: ${kpis.penyelenggara ?? 'HIMA BISDIG FEB UNM'}`,
         icon: ClipboardList,
         variant: 'dark',
       });
     }
 
-    // 3. Post Test atau Rating Pemateri
+    // ── Card 3: Nilai Post Test / Rating Pemateri / Jumlah Pelaksanaan ────────
     if (kpis.hasTest) {
       cards.push({
         title: 'Rata-rata Post Test',
@@ -118,21 +131,21 @@ export default function Dashboard({ selectedKegiatanId }) {
       cards.push({
         title: 'Rating Pemateri',
         value: `${kpis.ratingPemateri}/5`,
-        subtitle: kpis.ratingPemateri >= 4.5 ? 'Kategori: Sangat Baik' : 'Kategori: Baik',
+        subtitle: kpis.ratingPemateri >= 4.5 ? 'Kategori: Sangat Baik' : kpis.ratingPemateri >= 4.0 ? 'Kategori: Baik' : 'Kategori: Cukup',
         icon: Award,
         variant: 'blue',
       });
     } else {
       cards.push({
-        title: 'Status',
-        value: kpis.status === 'Selesai' ? '✓' : '…',
-        subtitle: kpis.status,
+        title: 'Jumlah Pelaksanaan',
+        value: kpis.jumlahPelaksanaan ?? 1,
+        subtitle: `Sesi — ${kpis.namaKegiatan}`,
         icon: Award,
         variant: 'dark',
       });
     }
 
-    // 4. Gain / Jumlah Sesi
+    // ── Card 4: Gain / Status Kegiatan ────────────────────────────────────────
     if (kpis.hasTest) {
       cards.push({
         title: 'Peningkatan (Gain)',
@@ -144,15 +157,15 @@ export default function Dashboard({ selectedKegiatanId }) {
       });
     } else {
       cards.push({
-        title: 'Jumlah Sesi',
-        value: kpis.jumlahPelaksanaan ?? 1,
-        subtitle: `${kpis.jenisKegiatan} — ${kpis.status}`,
+        title: 'Status Kegiatan',
+        value: kpis.status === 'Selesai' ? 'Selesai' : 'Berjalan',
+        subtitle: `${kpis.jenisKegiatan} — ${kpis.jumlahPelaksanaan ?? 1} sesi`,
         icon: TrendingUp,
-        variant: 'dark',
+        variant: kpis.status === 'Selesai' ? 'dark' : 'dark',
       });
     }
 
-    // 5. Kepuasan
+    // ── Card 5: Kepuasan Peserta ──────────────────────────────────────────────
     cards.push({
       title: 'Kepuasan Peserta',
       value: kpis.avgKepuasan !== null ? `${kpis.avgKepuasan}` : 'N/A',
@@ -163,6 +176,7 @@ export default function Dashboard({ selectedKegiatanId }) {
 
     return cards;
   }, [kpis]);
+
 
   return (
     <div className="flex flex-col gap-5 animate-on-load">
@@ -214,10 +228,18 @@ export default function Dashboard({ selectedKegiatanId }) {
 
         {/* Chart 2: Donut */}
         <ChartCard
-          title={kpis.hasTest ? 'Persentase Peningkatan Nilai Peserta' : 'Distribusi Rating Kepuasan'}
-          badge={kpis.hasTest ? 'Gain Analysis' : 'Kepuasan'}
+          title={kpis.isTOT ? 'Status Kelulusan Peserta TOT' : kpis.hasTest ? 'Persentase Peningkatan Nilai Peserta' : 'Distribusi Rating Kepuasan'}
+          badge={kpis.isTOT ? 'KPI Lulusan' : kpis.hasTest ? 'Gain Analysis' : 'Kepuasan'}
         >
-          {kpis.hasTest ? (
+          {kpis.isTOT ? (
+            totDonutData.some(d => d.value > 0)
+              ? <ImprovementDonutChart
+                  data={totDonutData}
+                  totalLabel="Peserta"
+                  totalValue={kpis.totKelulusan?.total ?? 0}
+                />
+              : <NoDataPlaceholder message="Tidak ada data kelulusan TOT" />
+          ) : kpis.hasTest ? (
             donutData.some(d => d.value > 0)
               ? <ImprovementDonutChart
                   data={donutData}

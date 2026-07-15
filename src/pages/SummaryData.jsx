@@ -3,7 +3,7 @@ import { Users, BookOpen, CheckCircle, TrendingUp, Star, BarChart2 } from 'lucid
 import { ResponsiveContainer, BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Cell } from 'recharts';
 import {
   kegiatan, getSummaryStats, getFeedbackByKegiatan, getPesertaByKegiatan,
-  computeKPIs, round2,
+  computeKPIs, round2, getTOTKelulusan,
 } from '../utils/dataUtils';
 
 function StatCard({ title, value, subtitle, icon: Icon, color = '#d4a017' }) {
@@ -42,19 +42,21 @@ export default function SummaryData() {
   const perKegiatan = useMemo(() => kegiatan.map(kg => {
     const kpis = computeKPIs(kg.ID_Kegiatan);
     const ps = getPesertaByKegiatan(kg.ID_Kegiatan);
-    const fb = getFeedbackByKegiatan(kg.ID_Kegiatan);
+    const totKelulusan = getTOTKelulusan(kg.ID_Kegiatan);
     return {
       id: kg.ID_Kegiatan,
       nama: kg.Nama_Kegiatan,
       jenis: kg.Jenis_Kegiatan,
       status: kg.Status,
-      peserta: ps.length || fb.length,
+      peserta: ps.length,
       avgPre: kpis.avgPre,
       avgPost: kpis.avgPost,
       gain: kpis.gain,
       gainPct: kpis.gainPct,
       kepuasan: kpis.avgKepuasan,
       hasTest: kpis.hasTest,
+      isTOT: kg.ID_Kegiatan === 'KGT003',
+      totKelulusan,
     };
   }), []);
 
@@ -145,6 +147,7 @@ export default function SummaryData() {
                 <th>Avg Post Test</th>
                 <th>Gain (%)</th>
                 <th>Rating Kepuasan</th>
+                <th>Lulusan</th>
               </tr>
             </thead>
             <tbody>
@@ -173,6 +176,17 @@ export default function SummaryData() {
                   <td>
                     {kg.kepuasan !== null
                       ? <span className="font-semibold text-gold-400">{kg.kepuasan}/5</span>
+                      : <span className="text-muted-foreground">—</span>
+                    }
+                  </td>
+                  <td>
+                    {kg.isTOT && kg.totKelulusan
+                      ? <span
+                          className="font-semibold"
+                          style={{ color: kg.totKelulusan.pctLulus >= 80 ? '#10b981' : '#f59e0b' }}
+                        >
+                          {kg.totKelulusan.lulus}/{kg.totKelulusan.total} ({kg.totKelulusan.pctLulus}%)
+                        </span>
                       : <span className="text-muted-foreground">—</span>
                     }
                   </td>
