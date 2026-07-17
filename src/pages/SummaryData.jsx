@@ -48,7 +48,7 @@ export default function SummaryData() {
       nama: kg.Nama_Kegiatan,
       jenis: kg.Jenis_Kegiatan,
       status: kg.Status,
-      peserta: ps.length,
+      peserta: kpis.totalPeserta,
       avgPre: kpis.avgPre,
       avgPost: kpis.avgPost,
       gain: kpis.gain,

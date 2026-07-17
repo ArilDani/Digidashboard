@@ -108,6 +108,14 @@ export default function Dashboard({ selectedKegiatanId }) {
         icon: ClipboardList,
         variant: 'dark',
       });
+    } else if (kpis.isKajian) {
+      cards.push({
+        title: 'Pelaksanaan Kajian Keilmuan',
+        value: '2/3',
+        subtitle: 'Sesi Terlaksana',
+        icon: ClipboardList,
+        variant: 'dark',
+      });
     } else {
       cards.push({
         title: 'Jenis Kegiatan',
@@ -134,6 +142,22 @@ export default function Dashboard({ selectedKegiatanId }) {
         subtitle: kpis.ratingPemateri >= 4.5 ? 'Kategori: Sangat Baik' : kpis.ratingPemateri >= 4.0 ? 'Kategori: Baik' : 'Kategori: Cukup',
         icon: Award,
         variant: 'blue',
+      });
+    } else if (kpis.isKajian) {
+      cards.push({
+        title: 'Pelaksanaan Kajian Isu',
+        value: '4/5',
+        subtitle: 'Sesi Terlaksana',
+        icon: Award,
+        variant: 'dark',
+      });
+    } else if (kpis.isFunGames) {
+      cards.push({
+        title: 'Pelaksanaan',
+        value: '2/4',
+        subtitle: 'Sesi Terlaksana',
+        icon: Award,
+        variant: 'dark',
       });
     } else {
       cards.push({
@@ -218,27 +242,27 @@ export default function Dashboard({ selectedKegiatanId }) {
       {/* ── Charts Grid ──────────────────────────────────────────────────────── */}
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
         {/* Chart 1: Score Distribution or Feedback Bar */}
-        <div className="lg:col-span-2">
-          <ChartCard
-            title={kpis.hasTest ? 'Perbandingan Nilai Pre Test dan Post Test' : 'Rating per Aspek Kegiatan'}
-            badge={kpis.hasTest ? 'Distribusi Nilai' : 'Feedback'}
-          >
-            {kpis.hasTest ? (
-              scoreDistData.some(d => d['Pre Test'] > 0 || d['Post Test'] > 0)
-                ? <ScoreDistributionBarChart data={scoreDistData} />
-                : <NoDataPlaceholder message="Tidak ada data tes untuk kegiatan ini" />
-            ) : (
-              feedbackBarData.length > 0
-                ? <FeedbackBarChart data={feedbackBarData} />
-                : <NoDataPlaceholder message="Tidak ada data feedback untuk kegiatan ini" />
-            )}
-          </ChartCard>
-        </div>
+        <ChartCard
+          className="lg:col-span-2 h-full"
+          title={kpis.isKajian ? 'Performa Postingan Kajian Isu' : kpis.isFunGames ? 'Kehadiran Peserta Fun Games' : kpis.hasTest ? 'Perbandingan Nilai Pre Test dan Post Test' : 'Rating per Aspek Kegiatan'}
+          badge={kpis.isKajian ? 'Social Media' : kpis.isFunGames ? 'Kehadiran' : kpis.hasTest ? 'Distribusi Nilai' : 'Feedback'}
+        >
+          {kpis.hasTest ? (
+            scoreDistData.some(d => d['Pre Test'] > 0 || d['Post Test'] > 0)
+              ? <ScoreDistributionBarChart data={scoreDistData} />
+              : <NoDataPlaceholder message="Tidak ada data tes untuk kegiatan ini" />
+          ) : (
+            feedbackBarData.length > 0
+              ? <FeedbackBarChart data={feedbackBarData} />
+              : <NoDataPlaceholder message="Tidak ada data untuk grafik ini" />
+          )}
+        </ChartCard>
 
         {/* Chart 2: Donut */}
         <ChartCard
-          title={kpis.isTOT ? 'Status Kelulusan Peserta TOT' : kpis.hasTest ? 'Persentase Peningkatan Nilai Peserta' : 'Distribusi Rating Kepuasan'}
-          badge={kpis.isTOT ? 'KPI Lulusan' : kpis.hasTest ? 'Gain Analysis' : 'Kepuasan'}
+          className="h-full"
+          title={kpis.isKajian ? 'Distribusi Kajian Keilmuan' : kpis.isFunGames ? 'Distribusi Minat & Bakat' : kpis.isTOT ? 'Status Kelulusan Peserta TOT' : kpis.hasTest ? 'Persentase Peningkatan Nilai Peserta' : 'Distribusi Rating Kepuasan'}
+          badge={kpis.isKajian ? 'Peserta' : kpis.isFunGames ? 'Survei' : kpis.isTOT ? 'KPI Lulusan' : kpis.hasTest ? 'Gain Analysis' : 'Kepuasan'}
         >
           {kpis.isTOT ? (
             totDonutData.some(d => d.value > 0)
@@ -257,20 +281,21 @@ export default function Dashboard({ selectedKegiatanId }) {
                 />
               : <NoDataPlaceholder message="Tidak ada data peningkatan" />
           ) : (
-            feedbackDonutData.some(d => d.value > 0)
+            feedbackDonutData.length > 0
               ? <ImprovementDonutChart
                   data={feedbackDonutData}
-                  totalLabel="Responden"
-                  totalValue={kpis.hasFeedback ? feedbackDonutData.reduce((a, b) => a + b.value, 0) : 0}
+                  totalLabel={kpis.isFunGames ? "Responden" : "Peserta"}
+                  totalValue={kpis.isFunGames ? 8 : (kpis.isKajian ? 55 : (kpis.hasFeedback ? feedbackDonutData.reduce((a, b) => a + b.value, 0) : 0))}
+                  hideLegend={kpis.isFunGames}
                 />
-              : <NoDataPlaceholder message="Tidak ada data feedback" />
+              : <NoDataPlaceholder message="Tidak ada data donut chart" />
           )}
         </ChartCard>
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
         {/* Chart 3: Radar */}
-        <ChartCard title="Kepuasan Peserta per Aspek" badge="Rating">
+        <ChartCard className="h-full" title="Kepuasan Peserta per Aspek" badge="Rating">
           {radarData.length > 0 ? (
             <FeedbackRadarChart data={radarData} />
           ) : (
@@ -279,22 +304,21 @@ export default function Dashboard({ selectedKegiatanId }) {
         </ChartCard>
 
         {/* Chart 4: Line Trend */}
-        <div className="lg:col-span-2">
-          <ChartCard
-            title={kpis.hasTest ? 'Tren Nilai Rata-rata' : 'Tren Rating Kegiatan'}
-            badge="Per Agenda"
-          >
-            {kpis.hasTest ? (
-              scoreTrend.length > 0
-                ? <ScoreTrendLineChart data={scoreTrend} />
-                : <NoDataPlaceholder message="Tidak ada data tren tes" />
-            ) : (
-              ratingTrend.length > 0
-                ? <RatingTrendLineChart data={ratingTrend} />
-                : <NoDataPlaceholder message="Tidak ada data tren rating" />
-            )}
-          </ChartCard>
-        </div>
+        <ChartCard
+          className="lg:col-span-2 h-full"
+          title={kpis.hasTest ? 'Tren Nilai Rata-rata' : 'Tren Rating Kegiatan'}
+          badge="Per Agenda"
+        >
+          {kpis.hasTest ? (
+            scoreTrend.length > 0
+              ? <ScoreTrendLineChart data={scoreTrend} />
+              : <NoDataPlaceholder message="Tidak ada data tren tes" />
+          ) : (
+            ratingTrend.length > 0
+              ? <RatingTrendLineChart data={ratingTrend} />
+              : <NoDataPlaceholder message="Tidak ada data tren rating" />
+          )}
+        </ChartCard>
       </div>
 
       {/* Insight Panel */}

@@ -29,9 +29,9 @@ const CustomTooltip = ({ active, payload }) => {
   return null;
 };
 
-export function ImprovementDonutChart({ data, totalLabel, totalValue }) {
+export function ImprovementDonutChart({ data, totalLabel, totalValue, hideLegend = false }) {
   return (
-    <div style={{ display: 'flex', alignItems: 'center', width: '100%', height: 220, gap: 8 }}>
+    <div style={{ display: 'flex', alignItems: 'center', justifyContent: hideLegend ? 'center' : 'flex-start', width: '100%', height: 220, gap: 8 }}>
 
       {/* Pie chart column */}
       <div style={{ position: 'relative', flexShrink: 0, width: 160, height: '100%' }}>
@@ -73,34 +73,37 @@ export function ImprovementDonutChart({ data, totalLabel, totalValue }) {
       </div>
 
       {/* Legend column — takes remaining space, scrolls if needed */}
-      <div style={{
-        flex: 1,
-        display: 'flex',
-        flexDirection: 'column',
-        gap: 10,
-        overflow: 'hidden',
-      }}>
-        {data.map((d, i) => (
-          <div key={i} style={{ display: 'flex', alignItems: 'flex-start', gap: 8, minWidth: 0 }}>
-            <div style={{
-              width: 9, height: 9,
-              borderRadius: '50%',
-              background: d.color,
-              flexShrink: 0,
-              marginTop: 2,
-            }} />
-            <div style={{ minWidth: 0 }}>
-              <div style={{ fontSize: 10, color: '#cbd5e1', lineHeight: 1.35, whiteSpace: 'normal', wordBreak: 'break-word' }}>
-                {d.name}
-              </div>
-              <div style={{ fontSize: 11, color: '#fff', fontWeight: 600, marginTop: 1 }}>
-                {d.value}{' '}
-                <span style={{ color: '#94a3b8', fontWeight: 400 }}>({d.pct}%)</span>
+      {!hideLegend && (
+        <div style={{
+          flex: 1,
+          display: 'flex',
+          flexDirection: 'column',
+          gap: 10,
+          overflowY: 'auto',
+          paddingRight: 4,
+        }}>
+          {data.map((d, i) => (
+            <div key={i} style={{ display: 'flex', alignItems: 'flex-start', gap: 8, minWidth: 0 }}>
+              <div style={{
+                width: 9, height: 9,
+                borderRadius: '50%',
+                background: d.color,
+                flexShrink: 0,
+                marginTop: 2,
+              }} />
+              <div style={{ minWidth: 0 }}>
+                <div style={{ fontSize: 10, color: '#cbd5e1', lineHeight: 1.35, whiteSpace: 'normal', wordBreak: 'break-word' }}>
+                  {d.name}
+                </div>
+                <div style={{ fontSize: 11, color: '#fff', fontWeight: 600, marginTop: 1 }}>
+                  {d.value}{' '}
+                  <span style={{ color: '#94a3b8', fontWeight: 400 }}>({d.pct}%)</span>
+                </div>
               </div>
             </div>
-          </div>
-        ))}
-      </div>
+          ))}
+        </div>
+      )}
     </div>
   );
 }

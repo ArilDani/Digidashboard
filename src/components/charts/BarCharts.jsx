@@ -40,14 +40,24 @@ export function ScoreDistributionBarChart({ data }) {
 }
 
 export function FeedbackBarChart({ data }) {
+  const keys = data && data.length > 0 ? Object.keys(data[0]).filter(k => k !== 'aspect') : [];
+  const colors = ['#d4a017', '#3b82f6', '#10b981', '#ef4444', '#8b5cf6'];
+  
   return (
     <ResponsiveContainer width="100%" height={220}>
       <BarChart data={data} layout="vertical" margin={{ top: 10, right: 20, left: 0, bottom: 0 }}>
         <CartesianGrid strokeDasharray="3 3" stroke="rgba(255,255,255,0.06)" horizontal={false} />
-        <XAxis type="number" domain={[0, 5]} tick={{ fill: '#94a3b8', fontSize: 11 }} axisLine={false} tickLine={false} />
-        <YAxis dataKey="aspect" type="category" tick={{ fill: '#94a3b8', fontSize: 11 }} axisLine={false} tickLine={false} width={65} />
+        <XAxis type="number" tick={{ fill: '#94a3b8', fontSize: 11 }} axisLine={false} tickLine={false} />
+        <YAxis dataKey="aspect" type="category" tick={{ fill: '#94a3b8', fontSize: 11 }} axisLine={false} tickLine={false} width={100} />
         <Tooltip content={<CustomTooltip />} cursor={{ fill: 'rgba(255,255,255,0.04)' }} />
-        <Bar dataKey="value" name="Rating" fill="#d4a017" radius={[0, 4, 4, 0]} />
+        <Legend
+          wrapperStyle={{ fontSize: 11, color: '#94a3b8', paddingTop: 8 }}
+          iconType="circle"
+          iconSize={8}
+        />
+        {keys.map((k, i) => (
+          <Bar key={k} dataKey={k} name={k === 'value' ? 'Rating' : k} fill={colors[i % colors.length]} radius={[0, 4, 4, 0]} />
+        ))}
       </BarChart>
     </ResponsiveContainer>
   );

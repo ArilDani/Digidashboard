@@ -1,6 +1,6 @@
 import db from '../data/database.json';
 
-export const { kegiatan, peserta, pesertaTOT, prepost, feedback } = db;
+export const { kegiatan, peserta, pesertaTOT, prepost, feedback, surveiMinatBakat, kajianIsu } = db;
 
 // ── helpers ──────────────────────────────────────────────────────────────────
 export const avg = (arr) => arr.length ? arr.reduce((a, b) => a + b, 0) / arr.length : 0;
@@ -54,9 +54,11 @@ export function computeKPIs(id) {
   // 1. Total Peserta — selalu dari sheet peserta, kecuali Finance Talk (KGT002) di-hardcode 74
   let totalPeserta = ps.length;
   if (id === 'KGT002') totalPeserta = 74;
+  if (id === 'KGT006') totalPeserta = 55; // Kajian Keilmuan pertama (21) + kedua (34)
+  if (id === 'KGT007') totalPeserta = 34; // Fun games 1 (15) + 2 (19)
 
   // CSC (KGT004) KPI: Pengumpulan Project
-  const cscPengumpulanProject = id === 'KGT004' ? { dikumpulkan: 18, total: 18 } : null;
+  const cscPengumpulanProject = id === 'KGT004' ? { dikumpulkan: 10, total: 18 } : null;
   
   const targetPeserta = kg.Target_Peserta;
 
@@ -106,6 +108,8 @@ export function computeKPIs(id) {
     postLabel: avgPost !== null ? pctLabel(avgPost) : '',
     isTOT: id === 'KGT003',
     isCSC: id === 'KGT004',
+    isKajian: id === 'KGT006',
+    isFunGames: id === 'KGT007',
     totKelulusan,
     cscPengumpulanProject,
     namaKegiatan: kg.Nama_Kegiatan,
@@ -218,6 +222,30 @@ export function getRatingTrendAllData() {
 
 // Feedback donut for non-test activities (rating distribution)
 export function getFeedbackRatingDonutData(id) {
+  if (id === 'KGT006') {
+    // Kajian Keilmuan participants split
+    return [
+      { name: 'Kajian Pertama', value: 21, pct: round2(21/55*100), color: '#3b82f6' },
+      { name: 'Kajian Kedua', value: 34, pct: round2(34/55*100), color: '#d4a017' }
+    ];
+  }
+  if (id === 'KGT007') {
+    // Fun Games Survei Minat Bakat Donut chart
+    const buckets = {};
+    surveiMinatBakat.forEach(item => {
+      const minatStr = item['Minat & Bakat'] || '';
+      minatStr.split(',').forEach(m => {
+        const key = m.trim();
+        if (key) buckets[key] = (buckets[key] || 0) + 1;
+      });
+    });
+    const total = Object.values(buckets).reduce((a, b) => a + b, 0) || 1;
+    const colors = ['#d4a017', '#3b82f6', '#6b7280', '#ef4444', '#10b981', '#f59e0b', '#8b5cf6'];
+    return Object.entries(buckets).map(([name, value], i) => ({
+      name, value, pct: round2(value / total * 100), color: colors[i % colors.length],
+    }));
+  }
+
   const fb = getFeedbackByKegiatan(id);
   const buckets = { '5 - Sangat Baik': 0, '4 - Baik': 0, '3 - Cukup': 0, '1-2 - Kurang': 0 };
   fb.forEach((f) => {
@@ -237,6 +265,24 @@ export function getFeedbackRatingDonutData(id) {
 
 // Bar chart for feedback rating per aspect (for non-test kegiatan)
 export function getFeedbackBarData(id) {
+  if (id === 'KGT006') {
+    // Return bar data for Kajian Isu
+    return kajianIsu.map((isu, i) => ({
+      aspect: isu.isu.length > 20 ? isu.isu.substring(0, 18) + '...' : isu.isu,
+      'Suka': isu.suka,
+      'Komen': isu.komen,
+      'Posting Ulang': isu.posting_ulang,
+      'Bagikan': isu.bagikan,
+    }));
+  }
+  if (id === 'KGT007') {
+    // Return kehadiran Fun Games
+    return [
+      { aspect: 'Badminton', 'Kehadiran': 15 },
+      { aspect: 'Futsal', 'Kehadiran': 19 }
+    ];
+  }
+
   const fb = getFeedbackByKegiatan(id);
   const safeAvg = (key) => {
     const vals = fb.map((f) => f[key]).filter((v) => v !== null);
@@ -355,6 +401,27 @@ export function generateInsights(id) {
     });
   }
 
+  if (id === 'KGT006') {
+    insights.push({
+      type: 'star',
+      title: 'Kajian Isu Terbaik',
+      desc: 'Topik "KENAPA PEREMPUN SELALU DIJADIKAN UMPAN DI MEDIA SOSIAL" mendominasi dengan 193 Suka dan 19 Posting Ulang, mengindikasikan isu ini sangat relevan.'
+    });
+    insights.push({
+      type: 'warning',
+      title: 'Kajian Isu Rendah',
+      desc: 'Topik "Pembangunan gedung BU" memiliki interaksi nihil (0 Suka, 0 Komen). Perlu pemilihan isu yang lebih menarik perhatian audiens.'
+    });
+  }
+
+  if (id === 'KGT007') {
+    insights.push({
+      type: 'success',
+      title: 'Tingkat Partisipasi',
+      desc: 'Futsal mendominasi tingkat partisipasi kehadiran (19 orang) dibandingkan Badminton (15 orang).'
+    });
+  }
+
   // Default
   if (insights.length === 0) {
     insights.push({
@@ -369,10 +436,13 @@ export function generateInsights(id) {
 
 // ── Summary stats (all kegiatan) ──────────────────────────────────────────────
 export function getSummaryStats() {
-  // Total peserta: gabungan peserta biasa + pesertaTOT
-  const totalPeserta = peserta.length + pesertaTOT.length;
   const totalKeg = kegiatan.length;
   const selesai = kegiatan.filter((k) => k.Status === 'Selesai').length;
+
+  let totalPeserta = 0;
+  kegiatan.forEach(k => {
+    totalPeserta += computeKPIs(k.ID_Kegiatan).totalPeserta;
+  });
 
   const allPreVals = prepost.map((p) => p.Nilai_PreTest).filter((v) => v !== null);
   const allPostVals = prepost.map((p) => p.Nilai_PostTest).filter((v) => v !== null);
@@ -386,9 +456,34 @@ export function getSummaryStats() {
 }
 
 // ── All data table ──────────────────────────────────────────────────────────
-// Data proker: tampilkan data feedback (tanpa ID/Nama Peserta)
-export function getAllDataTable() {
-  return feedback.map((f) => {
+// Data proker: tampilkan data feedback, atau data custom jika kajian/fun games
+export function getAllDataTable(filterKg) {
+  if (filterKg === 'KGT006') {
+    // Return Kajian Isu data for the table
+    return kajianIsu.map(i => ({
+      Nama_Kegiatan: 'Kajian Isu',
+      Jenis_Kegiatan: 'Proker',
+      Isu: i.isu,
+      Suka: i.suka,
+      Komen: i.komen,
+      'Posting Ulang': i.posting_ulang,
+      Bagikan: i.bagikan
+    }));
+  }
+  
+  if (filterKg === 'KGT007') {
+    // Return Survei Minat Bakat
+    return surveiMinatBakat.map(s => ({
+      Nama_Kegiatan: 'Fun Games - Survei',
+      Jenis_Kegiatan: 'Proker',
+      'Minat & Bakat': s['Minat & Bakat'] || '-',
+      'Masukan / Saran': s['Masukan / Saran'] || '-'
+    }));
+  }
+
+  let dataFb = feedback;
+  // If a specific non-custom keg is filtered, the component filters it. But returning all by default.
+  return dataFb.map((f) => {
     const kg = kegiatan.find((k) => k.ID_Kegiatan === f.ID_Kegiatan);
     return {
       Nama_Kegiatan: kg ? kg.Nama_Kegiatan : '-',

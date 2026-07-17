@@ -3,15 +3,18 @@ import { Search, Filter, ChevronUp, ChevronDown } from 'lucide-react';
 import { getAllDataTable, kegiatan } from '../utils/dataUtils';
 
 export default function DataProker({ selectedKegiatanId }) {
-  const allData = useMemo(() => getAllDataTable(), []);
   const [search, setSearch] = useState('');
   const [filterKg, setFilterKg] = useState('all');
   const [sortKey, setSortKey] = useState(null);
   const [sortDir, setSortDir] = useState('asc');
+  
+  const allData = useMemo(() => getAllDataTable(filterKg), [filterKg]);
 
   const filtered = useMemo(() => {
     let data = allData;
-    if (filterKg !== 'all') data = data.filter(r => r.Nama_Kegiatan === kegiatan.find(k => k.ID_Kegiatan === filterKg)?.Nama_Kegiatan);
+    if (filterKg !== 'all' && filterKg !== 'KGT006' && filterKg !== 'KGT007') {
+      data = data.filter(r => r.Nama_Kegiatan === kegiatan.find(k => k.ID_Kegiatan === filterKg)?.Nama_Kegiatan);
+    }
     if (search) {
       const q = search.toLowerCase();
       data = data.filter(r => Object.values(r).some(v => String(v).toLowerCase().includes(q)));
@@ -32,17 +35,25 @@ export default function DataProker({ selectedKegiatanId }) {
     else { setSortKey(key); setSortDir('asc'); }
   };
 
-  // Kolom: tampilkan data feedback
-  const columns = [
-    { key: 'Nama_Kegiatan', label: 'Kegiatan' },
-    { key: 'Jenis_Kegiatan', label: 'Jenis' },
-    { key: 'Rating_Materi', label: 'Materi' },
-    { key: 'Rating_Pemateri', label: 'Pemateri' },
-    { key: 'Rating_Panitia', label: 'Panitia' },
-    { key: 'Rating_Fasilitas', label: 'Fasilitas' },
-    { key: 'Rating_Keseluruhan', label: 'Keseluruhan' },
-    { key: 'Kritik_dan_Saran', label: 'Kritik & Saran' },
-  ];
+  // Kolom: dinamis sesuai data
+  const columns = useMemo(() => {
+    if (filtered.length > 0) {
+      return Object.keys(filtered[0]).map(k => ({
+        key: k,
+        label: k.replace(/_/g, ' ')
+      }));
+    }
+    return [
+      { key: 'Nama_Kegiatan', label: 'Kegiatan' },
+      { key: 'Jenis_Kegiatan', label: 'Jenis' },
+      { key: 'Rating_Materi', label: 'Materi' },
+      { key: 'Rating_Pemateri', label: 'Pemateri' },
+      { key: 'Rating_Panitia', label: 'Panitia' },
+      { key: 'Rating_Fasilitas', label: 'Fasilitas' },
+      { key: 'Rating_Keseluruhan', label: 'Keseluruhan' },
+      { key: 'Kritik_dan_Saran', label: 'Kritik & Saran' },
+    ];
+  }, [filtered]);
   return (
     <div className="flex flex-col gap-4 animate-on-load">
       <div>
